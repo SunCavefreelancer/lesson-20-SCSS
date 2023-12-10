@@ -1,0 +1,13 @@
+/* Підключення шрифту в ручну*/
+@import url('https://fonts.googleapis.com/css?family=Inter:400,800&display=swap');
+
+/* Шрифт № 1 */
+@font-face {
+	font-family: 'CoreSansC-500';
+	src:
+		url("..//fonts/CoreSansC-55Medium.woff2") format("woff2"),
+		url("..//fonts/CoreSansC-55Medium.woff") format("woff");
+	wont-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}

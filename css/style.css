@@ -147,18 +147,60 @@ body {
 }
 .block__column {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
+@media (max-width: 850px) {
+  .block__column {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 570px) {
+  .block__column {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .block__card {
-  background-color: blue;
+  /* 		background-color: blue; */
+  content: "";
+  background-image: url(../img/02.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 400/211;
+  position: relative;
+  color: #fff;
+  font-weight: 900;
+  font-size: 25px;
   border-radius: 15px;
   text-align: center;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-.block__card:not(:last-child) {
+.block__card > :last-child {
   margin-bottom: 0;
+}
+.block__card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(84, 241, 11, 0.3019607843);
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0.5;
+}
+.block__card:hover::before {
+  -webkit-transform: translate(-100%, 0px);
+      -ms-transform: translate(-100%, 0px);
+          transform: translate(-100%, 0px);
 }
 .block__item {
   padding: 10px 10px;
@@ -181,16 +223,39 @@ body {
   -webkit-transition: 0.8s;
   transition: 0.8s;
 }
-.block__item--2:not(:last-child) {
+.block__item--2__item--2:not(:last-child) {
   margin-bottom: 20px;
+}
+.block__item--2__item--2::before {
+  content: "";
+  background-image: url(https://static-cse.canva.com/blob/846900/photo1502082553048f009c37129b9e1583341920812.jpeg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
 }
 .block__button {
   padding: 5px 25px;
   background-color: aqua;
   font-size: 20px;
   color: #000;
+  text-transform: capitalize;
   display: inline-block;
+  border: 1px solid transparent;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 1;
 }
 .block__button:not(:last-child) {
   margin-bottom: 10px;
+}
+.block__button:hover {
+  background-color: rgb(224, 80, 246);
+  -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+          transform: translateY(-5px);
+  border: 1px solid #fff;
+  opacity: 1;
 }

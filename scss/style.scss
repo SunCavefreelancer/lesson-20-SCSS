@@ -32,16 +32,15 @@ body {
 	padding-right: 15px;
 }
 
+
+
 //SCSS основні стилі 
 .block {
-	&__:not(:last-child) {
-		margin-bottom: 0;
-	
-	h1 {
+	h1 {		//відкрили скобку саме для h1
 		padding: 20px 5px;
 		display: flex;
 		gap: 6px;
-	&::before {
+	&::before {				//вкладеність
 		content: "";
 		display: inline-block;
 		width: 6px;
@@ -51,71 +50,136 @@ body {
 		border-radius: 6px;
 		transition: 0.5s;
 	}
-	&:hover::before {
+	&:hover::before {		//вкладеність
 		background-color: yellow;
 		}
 
-	&:not(:last-child) {
+	&:not(:last-child) {	//вкладеність
 		margin-bottom: 20px;
 	}
-	}
+	}		//закрили скобку саме для h1
 
-// .block__column 
+
+// .block__column (це колонка для карток)
 	&__column {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+		grid-template-columns: repeat(3, 1fr);
 		gap: 20px;
+		@media (max-width:850px){		// робимо @media (max-width) 
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width:570px){		// робимо @media (max-width) 
+			grid-template-columns: repeat(1, 1fr);	
+	}
 	}
 
-	// .block__card
+	// .block__card 			(це сама картка)
 	&__card {
-		background-color: blue;
-		border-radius: 15px;
-		text-align: center;
-		transition: 0.5s;
-	}
-}
+/* 		background-color: blue; */
+		content: "";						 // ставимо фон для картки
+		background-image: url(../img/02.jpg);// ставимо фон для картки
+		background-repeat: no-repeat;		// ставимо фон для картки
+		background-position: center;		// ставимо фон для картки
+		background-size: cover;				// ставимо фон для картки
+		width: 100%;						// ставимо фон для картки
+		height: 100%;						// ставимо фон для картки
 
-	// .block__item
+		aspect-ratio: 400 / 211;			// розмір фото по макету ШИРИНА та ВИСОТА
+
+		position: relative;		//позіціонуємо плашку при наведені на картку
+
+		color: #fff;
+		font-weight: 900;
+		font-size: 25px;
+		border-radius: 15px;
+		text-align: center;		//весь контент по центру
+		transition: 0.5s;
+	&>:last-child {				// відміняємо відступ у останнього елемента при зміні контента в картці 
+		margin-bottom: 0;
+	}
+	&::before {			// створили плашку при наведені на картку
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-color: #54f10b4d;
+			transform: translate(0px, 0px);
+			transition: 0.5s;
+			opacity: 0.5;
+			
+		}
+		&:hover::before {
+			transform: translate(-100%, 0px);
+		}
+	}
+
+
+
+	// .block__item 			(це елементи в картці)
 	&__item {
 		padding: 10px 10px;
 		margin-bottom: 25px;
 		border: 1px solid red;
 	}
-
-
-// показали елемент картки
+								// показали елемент картки
 	&__card:hover &__item--2 {
 		visibility: visible;
 		background-color: rgb(17, 174, 232);
 		opacity: 1;
 		transition: 0.4s;
 	}
+
+
 		// .block__item--2
-		&__item--2 {	//сховали елемент картки
+		&__item--2 {			//сховали елемент картки -модифікатор-
 			padding: 30px;
 			margin-bottom: 35px;
 			background-color: antiquewhite;
 			visibility: hidden;
 			opacity: 0;
 			transition: 0.8s;
-		}
+		
 		&__item--2:not(:last-child){
 			margin-bottom: 20px;
 		}
+		&__item--2::before {
+			content: "";
+			background-image: url(https://static-cse.canva.com/blob/846900/photo1502082553048f009c37129b9e1583341920812.jpeg);
+			background-repeat: no-repeat;
+			background-position: 0 0;
+			background-size: contain;
+			width: 100%;
+			height: 100%;
+			display: inline-block;
+		}
+		}
 
 
-	// block__button
+		
+	// block__button			// кнопка з посиланням
 	&__button {
 		padding: 5px 25px;
 		background-color: aqua;
 		font-size: 20px;
 		color: #000;
+		text-transform: capitalize;
 		display: inline-block;
+		
+		border: 1px solid transparent;
+		transition: all 0.5s;
+		opacity: 1;								// робимо плавність 
 	}
 	&__button:not(:last-child) {
 		margin-bottom: 10px;
 	}
+	&__button:hover {
+		background-color: rgb(224, 80, 246);
+		transform: translateY(-5px);
+		border: 1px solid #fff;
+		opacity: 1;								// робимо плавність 
+	}
 
-}
+}//тут закрили скобку для всього БЛОКУ
 

@@ -157,11 +157,13 @@ body {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
+.block__card:not(:last-child) {
+  margin-bottom: 0;
+}
 .block__item {
-  padding: 5px 10px;
+  padding: 10px 10px;
   margin-bottom: 25px;
   border: 1px solid red;
-  display: block;
 }
 .block__card:hover .block__item--2 {
   visibility: visible;
@@ -187,6 +189,7 @@ body {
   background-color: aqua;
   font-size: 20px;
   color: #000;
+  display: inline-block;
 }
 .block__button:not(:last-child) {
   margin-bottom: 10px;

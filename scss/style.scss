@@ -86,7 +86,7 @@ body {
 		width: 100%;						// ставимо фон для картки
 		height: 100%;						// ставимо фон для картки
 
-		aspect-ratio: 400 / 211;			// розмір фото по макету ШИРИНА та ВИСОТА
+		//aspect-ratio: 400 / 211;			// розмір фото по макету ШИРИНА та ВИСОТА
 
 		position: relative;		//позіціонуємо плашку при наведені на картку
 		overflow: hidden;
@@ -159,24 +159,38 @@ body {
 
 			// .block__list
 			&__list {
-				line-height: 130%;
+				line-height: 120%;
 			}
 	
 			// .block__link
 			&__link {
 				display: flex;
 				gap: 25px;
-				justify-content: center;
-				text-align: justify;
+				cursor: pointer;
+				//justify-content: flex-start;
 				&::before {
 					content: "";
-					width: 6px;
-					height: 6px;
-					flex: 0 0 6px;
+					width: 10px;
+					height: 10px;
+					flex: 0 0 10px;
 					background-color: #fff;
 					border-radius: 50%;
 					display: inline-block;
 					margin-top: 10px;
+					cursor: pointer;
+					transition: 0.5s;
+					border: 2px solid transparent;
+				}
+				&:hover::before {
+					background-color: #13f2fa;
+					border: 2px solid #fff;
+				}
+				& a:hover {
+					background-color: #a3ede24c;
+				}
+				& a {
+					padding: 5px 10px;
+					border-radius: 10px;
 				}
 			}
 				}		// закрили блок links

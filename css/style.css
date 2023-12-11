@@ -168,7 +168,6 @@ body {
   background-size: cover;
   width: 100%;
   height: 100%;
-  aspect-ratio: 400/211;
   position: relative;
   overflow: hidden;
   color: #fff;
@@ -229,29 +228,41 @@ body {
   z-index: 2;
 }
 .block .block__list {
-  line-height: 130%;
+  line-height: 120%;
 }
 .block .block__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 25px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: justify;
+  cursor: pointer;
 }
 .block .block__link::before {
   content: "";
-  width: 6px;
-  height: 6px;
+  width: 10px;
+  height: 10px;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 6px;
-          flex: 0 0 6px;
+      -ms-flex: 0 0 10px;
+          flex: 0 0 10px;
   background-color: #fff;
   border-radius: 50%;
   display: inline-block;
   margin-top: 10px;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: 2px solid transparent;
+}
+.block .block__link:hover::before {
+  background-color: #13f2fa;
+  border: 2px solid #fff;
+}
+.block .block__link a:hover {
+  background-color: rgba(163, 237, 226, 0.2980392157);
+}
+.block .block__link a {
+  padding: 5px 10px;
+  border-radius: 10px;
 }
 .block__button {
   padding: 5px 25px;

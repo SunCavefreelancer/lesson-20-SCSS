@@ -62,32 +62,35 @@ body {
 	// .hero__content
 	&__content {	
 		display: grid;
-		grid-template-columns: repeat(9, 1fr);
+		grid-template-columns: repeat(6, 1fr);
+		//grid-template-columns: 1fr 300px 1fr;
 		gap: 20px;
-		justify-items: center;			//вирівнюємо контент по центра разом з планетою
+		//justify-items: center;			//вирівнюємо контент по центра разом з планетою
 		align-items: center;			//вирівнюємо контент по центра разом з планетою
 
 		@media (max-width:767px){		// робимо @media (max-width) 
 			grid-template-columns: repeat(3, 1fr);
 		}
-
-
 	}
 
 	// .hero__title
 	&__title {
 		grid-column: span 3;
+		@media (max-width:767px){		// робимо @media (max-width) 
+			grid-column: span 6;
+		}		
 		font-family: 'CoreSansC-500';
-		font-size: 120px;
+		font-size: 140px;
 		line-height: 125%;
 		color: #fffcfc;
 		font-weight: 900;
 		padding: 20px;
-		@media (max-width:1100px){		// робимо @media (max-width) 
-			font-size:80px;
+		
+		@media (max-width:992px){		// робимо @media (max-width) 
+			font-size:100px;
 		}
 		@media (max-width:380px){		// робимо @media (max-width) 
-			font-size: 65px;
+			font-size: 75px;
 		}
 
 		position: relative;				//--цетнруємо блок 'Miami' по ЦЕНТРУ
@@ -95,7 +98,7 @@ body {
 		text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);  //получается уже красиво надпись 'Miami'
 		
 	& p:nth-child(2) { 					// для 2 ЗАГОЛОВКА - Beach- показать картинку полностью 
-		color: #fff;
+		color: #eaf0f1;
 		overflow: hidden;
 		z-index: 2;
 
@@ -109,7 +112,7 @@ body {
 	& p:nth-child(2):hover { // для 2 ЗАГОЛОВКА-Miami-
 		clip-path: polygon(0 0, 100% 1%, 100% 100%, 0% 100%); // НАПИСЬ Miami видно полностью, а Dreem вниз становится другого цвета
 	}
-	& p:nth-child(1) { // теперь для "~ h1" 1-го ЗАГОЛОВКА-Miami-
+	& p:nth-child(1) { // теперь для "~ p" 1-го ЗАГОЛОВКА-Miami-
 		color: #000;
 	}
 	& p:nth-child(1):hover ~ p { // теперь для "~ p" 1-го ЗАГОЛОВКА-Miami
@@ -120,14 +123,16 @@ body {
 
 	// .hero__sub-title
 	&__sub-title {
-		grid-column: span 3;
+		grid-template-columns: repeat(1, 1fr);
+		grid-column: span 6;
+
 		font-family: 'CoreSansC-500';
 		line-height: 130%;
 		font-size: 35px;
 		color: #fffcfc;
 		font-weight: 500;
 		padding: 20px;
-		text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);  //получается уже красиво надпись 'Miami'
+		text-shadow: 5px 0px 40px rgb(70, 67, 67);  //получается уже красиво надпись 'Miami'
 
 		@media (max-width:998px){		// робимо @media (max-width) 
 			font-size:30px;
@@ -138,13 +143,18 @@ body {
 	}
 
 
-	//.&__title span 
+	//.&__hero__logo 
 	&__logo {
 		grid-column: span 3;
 		filter: drop-shadow(5px 5px 40px #000);		
-		aspect-ratio: 350 / 350;
 		position: relative;
 		padding-bottom: 71.428571%; /* 250/350 */
+		width: 100%;	//	або width: 300px;
+
+
+		@media (max-width:767px){		// робимо @media (max-width) 
+			grid-column: span 6;
+		}
 	}
 
 	&__logo img{	
@@ -154,7 +164,6 @@ body {
 		width: 100%;
 		height: 100%;
 		object-fit: contain;
-
 	}
 }								//закрили самий блок hero
 

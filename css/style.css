@@ -146,9 +146,8 @@ body {
 }
 .hero__content {
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 20px;
-  justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -161,7 +160,7 @@ body {
 .hero__title {
   grid-column: span 3;
   font-family: "CoreSansC-500";
-  font-size: 120px;
+  font-size: 140px;
   line-height: 125%;
   color: #fffcfc;
   font-weight: 900;
@@ -170,18 +169,23 @@ body {
   text-transform: uppercase;
   text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
-@media (max-width: 1100px) {
+@media (max-width: 767px) {
   .hero__title {
-    font-size: 80px;
+    grid-column: span 6;
+  }
+}
+@media (max-width: 992px) {
+  .hero__title {
+    font-size: 100px;
   }
 }
 @media (max-width: 380px) {
   .hero__title {
-    font-size: 65px;
+    font-size: 75px;
   }
 }
 .hero__title p:nth-child(2) {
-  color: #fff;
+  color: #eaf0f1;
   overflow: hidden;
   z-index: 2;
   position: absolute;
@@ -207,14 +211,15 @@ body {
           clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
 .hero__sub-title {
-  grid-column: span 3;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column: span 6;
   font-family: "CoreSansC-500";
   line-height: 130%;
   font-size: 35px;
   color: #fffcfc;
   font-weight: 500;
   padding: 20px;
-  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  text-shadow: 5px 0px 40px rgb(70, 67, 67);
 }
 @media (max-width: 998px) {
   .hero__sub-title {
@@ -230,9 +235,14 @@ body {
   grid-column: span 3;
   -webkit-filter: drop-shadow(5px 5px 40px #000);
           filter: drop-shadow(5px 5px 40px #000);
-  aspect-ratio: 350/350;
   position: relative;
   padding-bottom: 71.428571%; /* 250/350 */
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .hero__logo {
+    grid-column: span 6;
+  }
 }
 .hero__logo img {
   position: absolute;

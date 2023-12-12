@@ -141,10 +141,20 @@ body {
 	//.&__title span 
 	&__logo {
 		grid-column: span 3;
+		filter: drop-shadow(5px 5px 40px #000);		
+		aspect-ratio: 350 / 350;
+		position: relative;
+		padding-bottom: 71.428571%; /* 250/350 */
 	}
 
 	&__logo img{	
+		position: absolute;
+		top: 0;
+		left: 0;
 		width: 100%;
+		height: 100%;
+		object-fit: contain;
+
 	}
 }								//закрили самий блок hero
 

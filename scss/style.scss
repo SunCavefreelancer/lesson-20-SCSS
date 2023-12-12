@@ -8,13 +8,10 @@
 
 
 body {
-	color: rgb(235, 240, 245);
 	background-color: rgb(2, 66, 177);
-	background-image: url(../img/01.webp);
-	background-repeat: no-repeat;
-	background-position: 0 0;
-	background-size: cover;
 }
+
+
 
 .wrapper {
 	overflow: clip;
@@ -40,7 +37,95 @@ body {
 
 
 //SCSS основні стилі 
+.hero {							//відкрили самий блок hero
+	padding: 15px 0  ;
+	text-align: center;
+	height: 100vh;
+
+	border: 1px solid red;
+
+	color: rgb(235, 240, 245);
+	background-image: url(../img/hero.webp);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: cover;
+
+	position: relative;					//цетнруємо блок по ЦЕНТРУ
+
+
+	// .hero__content
+	&__content {	
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		gap: 20px;
+		justify-items: center;			//вирівнюємо контент по центра разом з планетою
+		align-items: center;			//вирівнюємо контент по центра разом з планетою
+
+		@media (max-width:992px){		// робимо @media (max-width) 
+			font-size: 40px;
+			grid-template-columns: repeat(4, 1fr);
+		}
+		@media (max-width:450px){		// робимо @media (max-width) 
+			font-size: 30px;
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width:380px){		// робимо @media (max-width) 
+			font-size: 25px;
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		position: absolute;					//цетнруємо блок по ЦЕНТРУ
+		top: 50%;							//цетнруємо блок по ЦЕНТРУ
+		left: 50%;							//цетнруємо блок по ЦЕНТРУ
+		transform: translate(-50%, -50%);	//цетнруємо блок по ЦЕНТРУ
+
+		border: 1px solid rgb(251, 210, 210);
+	}
+
+	// .hero__title
+	&__title {
+		grid-column: span 2;
+		font-family: 'CoreSansC-500';
+		font-size: 65px;
+		line-height: 130%;
+		color: #fffcfc;
+		font-weight: 500;
+		border: 1px solid red;
+		padding: 20px;
+	}
+
+	// .hero__sub-title
+	&__sub-title {
+		grid-column: span 2;
+		font-family: 'CoreSansC-500';
+		line-height: 130%;
+		font-size: 35px;
+		color: #fffcfc;
+		font-weight: 500;
+		border: 1px solid red;
+		padding: 20px;
+	}
+
+
+	//.&__title span 
+	&__logo {
+		grid-column: span 2;
+	}
+
+	&__logo img{	
+
+	}
+}								//закрили самий блок hero
+
+
+
+
+
+
+
+//-----------------------------------------------------------------------
 .block {
+	padding: 50px 0;
 	h1 {
 		font-size: 60px;
 		padding: 35px 0 15px 0;

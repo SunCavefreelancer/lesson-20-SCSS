@@ -38,82 +38,113 @@ body {
 
 //SCSS основні стилі 
 .hero {							//відкрили самий блок hero
-	padding: 15px 0  ;
+	padding: 150px 0;
 	text-align: center;
 	height: 100vh;
-
-	border: 1px solid red;
+	display: flex;
+	align-items: center;
+	@media (max-width:767px){		// робимо @media (max-width) 
+		padding: 50px 0;
+	}
+	@media (max-width:350px){		// робимо @media (max-width) 
+		padding: 30px 0;
+	}
 
 	color: rgb(235, 240, 245);
-	background-image: url(../img/hero.webp);
+	background-image: url(../img/beach.webp);
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	background-size: cover;
 
-	position: relative;					//цетнруємо блок по ЦЕНТРУ
 
+	// .hero__conteiner
 
 	// .hero__content
 	&__content {	
 		display: grid;
-		grid-template-columns: repeat(6, 1fr);
+		grid-template-columns: repeat(9, 1fr);
 		gap: 20px;
 		justify-items: center;			//вирівнюємо контент по центра разом з планетою
 		align-items: center;			//вирівнюємо контент по центра разом з планетою
 
-		@media (max-width:992px){		// робимо @media (max-width) 
-			font-size: 40px;
-			grid-template-columns: repeat(4, 1fr);
-		}
-		@media (max-width:450px){		// робимо @media (max-width) 
-			font-size: 30px;
-			grid-template-columns: repeat(2, 1fr);
-		}
-		@media (max-width:380px){		// робимо @media (max-width) 
-			font-size: 25px;
-			grid-template-columns: repeat(2, 1fr);
+		@media (max-width:767px){		// робимо @media (max-width) 
+			grid-template-columns: repeat(3, 1fr);
 		}
 
-		position: absolute;					//цетнруємо блок по ЦЕНТРУ
-		top: 50%;							//цетнруємо блок по ЦЕНТРУ
-		left: 50%;							//цетнруємо блок по ЦЕНТРУ
-		transform: translate(-50%, -50%);	//цетнруємо блок по ЦЕНТРУ
 
-		border: 1px solid rgb(251, 210, 210);
 	}
 
 	// .hero__title
 	&__title {
-		grid-column: span 2;
+		grid-column: span 3;
 		font-family: 'CoreSansC-500';
-		font-size: 65px;
-		line-height: 130%;
+		font-size: 120px;
+		line-height: 125%;
 		color: #fffcfc;
-		font-weight: 500;
-		border: 1px solid red;
+		font-weight: 900;
 		padding: 20px;
+		@media (max-width:1100px){		// робимо @media (max-width) 
+			font-size:80px;
+		}
+		@media (max-width:380px){		// робимо @media (max-width) 
+			font-size: 65px;
+		}
+
+		position: relative;				//--цетнруємо блок 'Miami' по ЦЕНТРУ
+		text-transform: uppercase;
+		text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);  //получается уже красиво надпись 'Miami'
+		
+	& p:nth-child(2) { 					// для 2 ЗАГОЛОВКА - Beach- показать картинку полностью 
+		color: #fff;
+		overflow: hidden;
+		z-index: 2;
+
+		position: absolute;					//цетнруємо блок 'Miami' по ЦЕНТРУ
+		top:50%;							//цетнруємо блок 'Miami' по ЦЕНТРУ
+		left: 50%;							//цетнруємо блок 'Miami' по ЦЕНТРУ
+		transform: translate(-50%, -50%);  //цетнруємо блок 'Miami' по ЦЕНТРУ
+		transition: 0.5s; 
+		clip-path: polygon(0 0, 100% 1%, 100% 0, 0% 100%); // теперь надпись № 1 справа и наполовину черная, а верхняя полностью ВИДНАЯ, а копировали код в clip-pathс полным квадратом 
 	}
+	& p:nth-child(2):hover { // для 2 ЗАГОЛОВКА-Miami-
+		clip-path: polygon(0 0, 100% 1%, 100% 100%, 0% 100%); // НАПИСЬ Miami видно полностью, а Dreem вниз становится другого цвета
+	}
+	& p:nth-child(1) { // теперь для "~ h1" 1-го ЗАГОЛОВКА-Miami-
+		color: #000;
+	}
+	& p:nth-child(1):hover ~ p { // теперь для "~ p" 1-го ЗАГОЛОВКА-Miami
+		clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); // теперь нижнюю надпись видно полностью, а копировали код в clip-pathс пустым квадратом
+	}
+	}
+
 
 	// .hero__sub-title
 	&__sub-title {
-		grid-column: span 2;
+		grid-column: span 3;
 		font-family: 'CoreSansC-500';
 		line-height: 130%;
 		font-size: 35px;
 		color: #fffcfc;
 		font-weight: 500;
-		border: 1px solid red;
 		padding: 20px;
+		text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);  //получается уже красиво надпись 'Miami'
+
+		@media (max-width:998px){		// робимо @media (max-width) 
+			font-size:30px;
+		}
+		@media (max-width:940px){		// робимо @media (max-width) 
+			font-size: 25px;
+		}
 	}
 
 
 	//.&__title span 
 	&__logo {
-		grid-column: span 2;
+		grid-column: span 3;
 	}
 
 	&__logo img{	
-
+		width: 100%;
 	}
 }								//закрили самий блок hero
 
@@ -126,6 +157,17 @@ body {
 //-----------------------------------------------------------------------
 .block {
 	padding: 50px 0;
+	color: rgb(235, 240, 245);
+	background-image: url(../img/01.webp);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: cover;
+	@media (max-width:992px){		// робимо @media (max-width) 
+		padding: 20px 0;
+	}
+	@media (max-width:350px){		// робимо @media (max-width) 
+		padding: 10px 0;
+	}
 	h1 {
 		font-size: 60px;
 		padding: 35px 0 15px 0;

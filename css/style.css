@@ -92,6 +92,10 @@ textarea {
 body {
   color: rgb(235, 240, 245);
   background-color: rgb(2, 66, 177);
+  background-image: url(../img/01.webp);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
 }
 
 .wrapper {
@@ -120,29 +124,59 @@ body {
 }
 
 .block h1 {
+  font-size: 60px;
+  padding: 35px 0 15px 0;
+  font-weight: 500;
+  font-family: "CoreSansC-500";
+  text-align: center;
+  -webkit-filter: drop-shadow(10px 2px 20px rgb(2, 241, 233));
+          filter: drop-shadow(10px 2px 20px rgb(2, 241, 233));
+  display: grid;
+  grid-template-columns: repeat(1), minmax(290px, 1fr);
+}
+@media (max-width: 992px) {
+  .block h1 {
+    font-size: 45px;
+  }
+}
+@media (max-width: 450px) {
+  .block h1 {
+    font-size: 35px;
+  }
+}
+.block h2 {
   padding: 20px 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 6px;
+  line-height: 150%;
+  font-size: 20px;
+  font-family: "CoreSansC-500";
 }
-.block h1::before {
+@media (max-width: 450px) {
+  .block h2 {
+    font-size: 18px;
+  }
+}
+.block h2::before {
   content: "";
   display: inline-block;
   width: 6px;
-  height: 21px;
+  height: 17px;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 6px;
           flex: 0 0 6px;
   background-color: turquoise;
   border-radius: 6px;
+  margin-top: 7px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-.block h1:hover::before {
+.block h2:hover::before {
   background-color: yellow;
 }
-.block h1:not(:last-child) {
+.block h2:not(:last-child) {
   margin-bottom: 20px;
 }
 .block__column {
@@ -150,12 +184,12 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
-@media (max-width: 850px) {
+@media (max-width: 992px) {
   .block__column {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (max-width: 570px) {
+@media (max-width: 767px) {
   .block__column {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -180,7 +214,7 @@ body {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-.block__card > :last-child {
+.block__card > *:last-child {
   margin-bottom: 0;
 }
 .block__card::before {
@@ -204,9 +238,55 @@ body {
       -ms-transform: translate(0px, 0px);
           transform: translate(0px, 0px);
 }
+.block .block__card--2 {
+  content: "";
+  background-image: url(../img/03.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.block .block__card--3 {
+  content: "";
+  background-image: url(../img/04.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.block .block__card--4 {
+  content: "";
+  background-image: url(../img/05.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.block .block__card--5 {
+  content: "";
+  background-image: url(../img/06.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.block .block__card--6 {
+  content: "";
+  background-image: url(../img/07.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
 .block__item {
   padding: 10px 10px;
   margin-bottom: 10px;
+  text-shadow: -2px 1px 2px #000;
 }
 .block__card:hover .block__item--2 {
   visibility: visible;
@@ -229,6 +309,7 @@ body {
 }
 .block .block__list {
   line-height: 120%;
+  text-shadow: none;
 }
 .block .block__link {
   display: -webkit-box;
@@ -236,6 +317,10 @@ body {
   display: flex;
   gap: 25px;
   cursor: pointer;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  text-align: left;
 }
 .block .block__link::before {
   content: "";
@@ -277,11 +362,9 @@ body {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   opacity: 1;
+  margin-bottom: 10px;
   position: relative;
   z-index: 2;
-}
-.block__button:not(:last-child) {
-  margin-bottom: 10px;
 }
 .block__button:hover {
   background-color: aqua;

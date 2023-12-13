@@ -43,6 +43,7 @@ body {
 	height: 100vh;
 	display: flex;
 	align-items: center;
+	//margin-bottom: 20px;
 	@media (max-width:767px){		// робимо @media (max-width) 
 		padding: 50px 0;
 	}
@@ -76,7 +77,7 @@ body {
 	// .hero__title
 	&__title {
 		grid-column: span 3;
-		@media (max-width:767px){		// робимо @media (max-width) 
+		@media (max-width:450px){		// робимо @media (max-width) 
 			grid-column: span 6;
 		}		
 		font-family: 'CoreSansC-500';
@@ -88,6 +89,9 @@ body {
 		
 		@media (max-width:992px){		// робимо @media (max-width) 
 			font-size:100px;
+		}
+		@media (max-width:767px){		// робимо @media (max-width) 
+			font-size: 55px;
 		}
 		@media (max-width:380px){		// робимо @media (max-width) 
 			font-size: 75px;
@@ -145,16 +149,17 @@ body {
 
 	//.&__hero__logo 
 	&__logo {
-		grid-column: span 3;
-		filter: drop-shadow(5px 5px 40px #000);		
+		grid-column: span 3;	
 		position: relative;
-		padding-bottom: 71.428571%; /* 250/350 */
+		padding-bottom: 55.11811%; /* 700/1270 */
 		width: 100%;	//	або width: 300px;
-
 
 		@media (max-width:767px){		// робимо @media (max-width) 
 			grid-column: span 6;
+			padding-bottom: 35.433071%; /* 450/1270 */
+			width: 100%;	//	або width: 300px;
 		}
+
 	}
 
 	&__logo img{	
@@ -177,10 +182,10 @@ body {
 .block {
 	padding: 50px 0;
 	color: rgb(235, 240, 245);
-	background-image: url(../img/01.webp);
+/* 	background-image: url(../img/01.webp);
 	background-repeat: no-repeat;
 	background-position: 0 0;
-	background-size: cover;
+	background-size: cover; */
 	@media (max-width:992px){		// робимо @media (max-width) 
 		padding: 20px 0;
 	}

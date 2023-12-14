@@ -681,9 +681,56 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
+.travel__text {
+  display: grid;
+  align-self: end;
+}
+.travel__title {
+  font-size: 30px;
+  font-family: "CoreSansC-95Blac";
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 125%;
+  text-shadow: 5px 2px 20px #000;
+  position: relative;
+  z-index: 2;
+  max-width: 360px; /* 320px + 20px+20px;		задаємо для тексту розмір*/
+  padding: 30px 20px 30px 20px;
+  text-align: center;
+  justify-self: end; /* пишемо 'ДЛЯ ВИРІВНЮВАННЯ КОНТЕНТУ' у картці право-центр-ліво */
+}
+@media (max-width: 992px) {
+  .travel__title {
+    font-size: 20px;
+  }
+}
+.travel__sub-title {
+  font-size: 20px;
+  font-family: "CoreSansC-500";
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 125%;
+  text-shadow: 5px 2px 20px #000;
+  position: relative;
+  z-index: 2;
+  max-width: 360px; /* 320px + 20px+20px;		задаємо для тексту розмір*/
+  padding: 25px 20px 25px 20px;
+  text-align: center;
+  justify-self: end; /* пишемо 'ДЛЯ ВИРІВНЮВАННЯ КОНТЕНТУ' у картці право-центр-ліво */
+}
+@media (max-width: 992px) {
+  .travel__sub-title {
+    font-size: 18px;
+  }
+}
 .travel__item {
   position: relative;
   padding-bottom: 55.208333%; /* 530/960 */
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.travel__item:hover {
+  opacity: 0.7;
 }
 @media (max-width: 767px) {
   .travel__item {

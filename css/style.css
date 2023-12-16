@@ -2,6 +2,7 @@
 /* Підключення шрифту в ручну*/
 @import url("https://fonts.googleapis.com/css?family=Inter:400,800&display=swap");
 /* Шрифт № 1 */
+@import "header.css";
 @font-face {
   font-family: "CoreSansC-500";
   src: url("..//fonts/CoreSansC-55Medium.woff2") format("woff2"), url("..//fonts/CoreSansC-55Medium.woff") format("woff");
@@ -98,6 +99,10 @@ textarea {
 /* FORM */
 body {
   background-color: rgb(2, 66, 177);
+}
+
+.menu-open body {
+  overflow: hidden; /* щоб не скролився сайт при адаптиві */
 }
 
 .wrapper {

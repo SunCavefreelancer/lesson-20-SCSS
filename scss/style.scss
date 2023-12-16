@@ -4,13 +4,17 @@
 @import "_reset.scss";
 // Компоненти, сторінки
 @import "_common.scss";
+// Компоненти, сторінки
+@import "header.css";
 
 
 
 body {
 	background-color: rgb(2, 66, 177);
 }
-
+.menu-open body {
+	overflow: hidden;			/* щоб не скролився сайт при адаптиві */
+}
 
 
 .wrapper {
@@ -98,6 +102,7 @@ body {
 		}
 
 		position: relative;				//--цетнруємо блок 'Miami' по ЦЕНТРУ
+		//z-index: 1;
 		text-transform: uppercase;
 		text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);  //получается уже красиво надпись 'Miami'
 		
@@ -151,6 +156,7 @@ body {
 	&__logo {
 		grid-column: span 3;	
 		position: relative;
+		//z-index: 1;
 		padding-bottom: 55.11811%; /* 700/1270 */
 		width: 100%;	//	або width: 300px;
 

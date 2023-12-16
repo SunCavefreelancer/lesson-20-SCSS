@@ -1143,6 +1143,9 @@ body {
 }
 .why__item {
   position: relative;
+  outline: 5px solid transparent;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   aspect-ratio: 400/200;
   display: grid;
   -ms-flex-line-pack: center;
@@ -1151,6 +1154,14 @@ body {
       -ms-flex-pack: end;
           justify-content: end;
   text-align: right;
+}
+.why__item:hover {
+  outline: 5px solid #0c4bc9;
+  -webkit-box-shadow: 5px 0px 20px #02147c;
+          box-shadow: 5px 0px 20px #02147c;
+  -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 .why__text {
   color: #000;

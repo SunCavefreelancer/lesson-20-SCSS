@@ -1055,6 +1055,7 @@ body {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);		//ШИРИНА карточки
 		gap: 20px;
+
 		@media (max-width:992px){
 			grid-template-columns: repeat(2, 1fr);		//ШИРИНА карточки
 		}
@@ -1066,6 +1067,8 @@ body {
 	// .why__item (card)
 	&__item {
 		position: relative;					//позіціонуємо ФОТО
+		outline: 5px solid transparent;
+		transition: 0.4s;
 		//content: "";
 		//background-image: url(../img/01.webp);
 		//background-position: center;
@@ -1078,6 +1081,11 @@ body {
 		align-content: center;				//ставимо текст куди треба
 		justify-content: end;				//ставимо текст куди треба
 		text-align: right;
+		&:hover {
+			outline: 5px solid #0c4bc9;
+			box-shadow: 5px 0px 20px #02147c;
+			transform: translateY(-5px);
+		}
 	}
 
 	// .why__TEXT (TEXT)
@@ -1253,7 +1261,8 @@ body {
 			transition: 0.5s;
 			opacity: 0;
 
-		// .operator-item__link
+
+		// .operator__item-link
 		&-link {					//оболонка для усіх link
 			background-color: rgb(5, 130, 226, 0.3);
 			padding: 20px;
@@ -1262,8 +1271,8 @@ body {
 			}
 		}
 
-		// .operator-item__link--1
-		&-link--1 {					//звертаємося окремо до кожної link 1
+		// .operator__item-link--1
+		&-link--1 {					//звертаємося окремо до кожної link (1)
 			transition: 0.5s;
 
 			&:hover {
@@ -1271,16 +1280,16 @@ body {
 			}
 		}
 
-		// .operator-item__link--2
-		&-link--2 {					//звертаємося окремо до кожної link 2
+		// .operator__item-link--2
+		&-link--2 {					//звертаємося окремо до кожної link (2)
 			transition: 0.5s;
 			&:hover {
 				transform: rotate(-360deg);
 			}
 		}
 
-		// .operator-item__link--3
-		&-link--3 {					//звертаємося окремо до кожної link 3
+		// .operator__item-link--3
+		&-link--3 {					//звертаємося окремо до кожної link (3)
 			transition: 0.5s;
 			&:hover {
 				transform: rotate(-360deg);

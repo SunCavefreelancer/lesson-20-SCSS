@@ -583,7 +583,6 @@ body {
 		color: #e1e1e1;
 		line-height: 130%;
 		margin-bottom: 15px;
-
 	}
 }								// закрили блок
 
@@ -592,8 +591,11 @@ body {
 //-------------------------------------------------------------------------
 .travel {				//відкрили блок
 	padding: 80px 0;
-	@media (max-width:540px){
+	@media (max-width:767px){
 		padding: 30px 0;		
+	}
+	@media (max-width:540px){
+		padding: 20px 0;		
 	}
 
 	// .travel__container
@@ -613,7 +615,7 @@ body {
 	// .travel__galery
 	&__galery {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(4, 1fr);					//ШИРИНА ФОТО
 		gap: 10px;
 	}
 
@@ -621,7 +623,6 @@ body {
 	// .travel__text // обгорткa тексту !!!
 	&__text {
 		display: grid;				//для обгортки тексту !!!
-		align-self: end;
 	}
 	// .travel__item --------------
 	&__title {
@@ -635,12 +636,10 @@ body {
 		z-index: 2;
 			
 			max-width: 360px; /* 320px + 20px+20px;		задаємо для тексту розмір*/
-			padding: 30px 20px 30px 20px;
-			text-align: center;
-			justify-self: end;	 /* пишемо 'ДЛЯ ВИРІВНЮВАННЯ КОНТЕНТУ' у картці право-центр-ліво *///для САМОГО тексту !!!
-			
+			padding: 30px 20px 30px 20px;		
 			@media (max-width:992px){
-				font-size: 20px;
+				font-size: 18px;
+				max-width: 450px; /* 380px + 20px+20px;		задаємо для тексту розмір*/
 			}
 		}
 
@@ -657,20 +656,25 @@ body {
 
 			max-width: 360px; /* 320px + 20px+20px;		задаємо для тексту розмір*/
 			padding: 25px 20px 25px 20px;
-			text-align: center;
-			justify-self: end;	 /* пишемо 'ДЛЯ ВИРІВНЮВАННЯ КОНТЕНТУ' у картці право-центр-ліво *///для САМОГО тексту !!!
 			
-			
-			@media (max-width:992px){
-				font-size: 18px;
+			@media (max-width:767px){
+				font-size: 16px;
+				max-width: 480px; /* 440px + 20px+20px;		задаємо для тексту розмір*/
 			}
 		}
 
 
 	// .travel__item -------обгортка фото-------
-	&__item {
+	&__item{
 		position: relative;
-		padding-bottom: 55.208333%; /* 530/960 */
+		//padding-bottom: 55.208333%; /* 530/960 */
+		aspect-ratio: 480/300;						//ВИСОТА ФОТО
+
+		display: grid;								//текст вниз-вниз
+		align-items: end;							//текст вниз-вниз
+		justify-content: center;						//текст вниз-вниз
+		text-align: center;	
+
 		transition: 0.5s;			
 		&:hover {
 				opacity: 0.7;
@@ -688,8 +692,10 @@ body {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-
 		}
+
+
+
 		&__item:nth-child(1){
 			grid-column-start: 1;
 			grid-column-end: 3;
@@ -837,3 +843,502 @@ body {
 			}
 		}
 }						//закрили блок
+
+
+
+//----------------------------------------------------------------
+.holiday {
+	padding: 10px 0 50px 0;
+	@media (max-width:1100px){
+		padding: 20px 0 40px 0;
+	}
+	@media (max-width:767px){
+		padding: 15px 0 30px 0;
+	}
+
+	// .holiday__content
+	&__content {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 12px;
+		@media (max-width:992px){		
+			grid-template-columns: repeat(1, 1fr);			
+		}
+	}
+
+	// .holiday__image
+	&__image {
+		position: relative;
+		padding-bottom: 94.488189%; /* 600/635 */
+	}
+	&__image img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	// .holiday__text
+	&__text {
+		display: grid;
+		justify-self: center;
+		align-self: center;
+
+		outline: 1px solid #0c4bc9;
+		padding: 50px;
+		box-shadow: 5px 0px 20px #02147c;
+		@media (max-width:767px){
+			padding: 20px;
+		}
+	}
+
+	// .holiday__title
+	&__title {
+		font-size: 50px;
+		color: #fff;
+		font-family: 'CoreSansC-95Blac';
+		font-weight: 900;
+		margin-bottom: 50px;
+		@media (max-width:1100px){
+			font-size: 40px;
+			margin-bottom: 25px;
+		}
+		@media (max-width:992px){
+			font-size: 35px;
+			margin-bottom: 25px;
+		}
+		@media (max-width:767px){
+			font-size: 25px;
+			margin-bottom: 25px;
+		}
+	}
+
+	// .holiday__sub-title
+	&__sub-title {
+		font-size: 21px;
+		color: #fff;
+		line-height: 130%;
+		font-family: 'CoreSansC-500';
+		font-weight: 500;
+		@media (max-width:992px){
+			font-size: 18px;
+		}
+		@media (max-width:767px){
+			font-size: 16px;
+		}
+	}
+}
+
+
+
+//------------------------------------------------------------
+.holiday-town {
+	padding: 10px 0 50px 0;
+	@media (max-width:1100px){
+		padding: 20px 0 40px 0;
+	}
+	@media (max-width:767px){
+		padding: 15px 0 30px 0;
+	}
+
+	// .holiday-town__content
+	&__content {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); //тут задаємо ШИРИНУ ФОТО
+		gap: 12px;	
+	}
+
+
+	// .holiday-town__image
+	&__image {
+		position: relative;
+		aspect-ratio: 614 / 609;				//тут задаємо ВИСОТУ ФОТО
+		grid-column: span 2;
+		@media (max-width:1226px){
+			grid-column: span 4;
+		}
+	}
+
+	&__image img{
+/* 		position: absolute;  тільки якщо є текст*/
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+
+	// .holiday-town__text
+	&__text {
+		display: grid;
+		justify-self: center;
+		align-self: center;
+
+		grid-column: span 2;
+
+		outline: 1px solid #0c4bc9;
+		padding: 25px;
+		box-shadow: 5px 0px 20px #02147c;
+		@media (max-width:1226px){
+			grid-column: span 4;
+		}
+		@media (max-width:767px){
+			//padding: 20px;
+		}
+	}
+
+	// .holiday-town__title
+	&__title {
+		font-size: 50px;
+		color: #fff;
+		font-family: 'CoreSansC-95Blac';
+		font-weight: 900;
+		margin-bottom: 20px;
+		@media (max-width:1100px){
+			font-size: 40px;
+			margin-bottom: 25px;
+		}
+		@media (max-width:992px){
+			font-size: 35px;
+			margin-bottom: 25px;
+		}
+		@media (max-width:767px){
+			font-size: 25px;
+			margin-bottom: 25px;
+		}
+	}
+
+	// .holiday-town__sub-title
+	&__sub-title {
+		font-size: 21px;
+		color: #fff;
+		line-height: 130%;
+		font-family: 'CoreSansC-500';
+		font-weight: 500;
+		@media (max-width:992px){
+			font-size: 18px;
+		}
+		@media (max-width:767px){
+			font-size: 16px;
+		}
+	}
+}
+
+
+//----------------------------------------------------------
+.why {
+	padding: 50px 0;
+	@media (max-width:620px){
+		padding: 20px 0;
+	}
+	h4 {
+		font-size: 40px;
+		color: #fff;
+		font-family: 'CoreSansC-95Blac';
+		font-weight: 900;
+		margin-bottom: 50px;
+		@media (max-width:992px){
+			font-size: 35px;
+			margin-bottom: 25px;
+		}
+		@media (max-width:767px){
+			font-size: 25px;
+			margin-bottom: 25px;
+		}
+	}
+
+	// .why__card (cards)
+	&__card {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);		//ШИРИНА карточки
+		gap: 20px;
+		@media (max-width:992px){
+			grid-template-columns: repeat(2, 1fr);		//ШИРИНА карточки
+		}
+		@media (max-width:620px){
+			grid-template-columns: repeat(1, 1fr);		//ШИРИНА карточки
+		}
+	}
+
+	// .why__item (card)
+	&__item {
+		position: relative;					//позіціонуємо ФОТО
+		//content: "";
+		//background-image: url(../img/01.webp);
+		//background-position: center;
+		//background-repeat: no-repeat;
+		//background-size: cover;}
+		
+		aspect-ratio: 400 / 200;			//ВИСОТА ФОТО!!! 
+
+		display: grid;						//ставимо текст куди треба
+		align-content: center;				//ставимо текст куди треба
+		justify-content: end;				//ставимо текст куди треба
+		text-align: right;
+	}
+
+	// .why__TEXT (TEXT)
+	&__text {
+		color: #000;
+		position: relative;				//витягуємо текст наверх
+		z-index: 2;						//витягуємо текст наверх
+		padding: 20px;						//250px+20px+20px для оболонки з текстом
+		max-width: 300px; 					//250px+20px+20px для оболонки з текстом
+		&>:last-child {
+			margin-bottom: 0
+		}
+	}
+
+	// .why__title
+	&__title {
+		font-size: 21px;
+		font-family: 'CoreSansC-500';
+		font-weight: 500;
+		margin-bottom: 15px;
+		@media (max-width:620px){
+			font-size: 23px;
+		}
+	}
+
+	// .why__sub-title
+	&__sub-title {
+		font-size: 15px;
+		line-height: 130%;
+		font-family: 'CoreSansC-500';
+		font-weight: 500;
+		margin-bottom: 15px;
+	}
+
+	// .why__img							//оболонка фото
+	/* 	&__img {} */
+
+	&__img img{								//САМЕ ФОТО
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+
+
+
+//-----------------------------------------------------------------
+.document {
+	padding: 50px 0;
+	@media (max-width:620px){
+		padding: 20px 0;
+	}
+	h4 {
+		font-size: 40px;
+		color: #fff;
+		font-family: 'CoreSansC-95Blac';
+		font-weight: 900;
+		margin-bottom: 50px;
+		@media (max-width:992px){
+			font-size: 35px;
+			margin-bottom: 25px;
+		}
+		@media (max-width:767px){
+			font-size: 25px;
+			margin-bottom: 25px;
+		}
+	}
+
+	// .document__cards
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+		@media (max-width:767px){
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width:540px){
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	// .document__card
+	&__card {
+		text-align: center;
+		transition: 0.5s;
+		transform: scale(1.001);
+		&:hover {
+			transform: scale(1.05);
+		}
+	}
+
+	// .document__title
+	&__title {
+		font-size: 18px;
+		font-family: 'Inter';
+		color: #e1e1e1;
+		line-height: 130%;
+		padding: 20px;
+		outline: 1px solid #0c4bc9;
+		box-shadow: 5px 0px 20px #02147c;
+	}
+}
+
+
+
+//---------------------------------------------------------------
+.operator {
+	padding: 50px 0;
+	@media (max-width:620px){
+		padding: 20px 0;
+	}
+	h4 {
+		font-size: 40px;
+		color: #fff;
+		font-family: 'CoreSansC-95Blac';
+		font-weight: 900;
+		margin-bottom: 50px;
+		@media (max-width:992px){
+			font-size: 35px;
+			margin-bottom: 25px;
+		}
+		@media (max-width:767px){
+			font-size: 25px;
+			margin-bottom: 25px;
+		}
+	}
+
+	// .operator__cards
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+		@media (max-width:767px){
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width:460px){
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	// .operator__card
+	&__card {					//пишемо для КАТРКИ
+		position: relative;
+		aspect-ratio: 400 / 400;			//тут ми задаємо ВИСОТУ для КАТРТКИ!!! (ширина - висота по макету)
+
+		display: grid;						//ставимо текст куди треба
+		justify-content: center;			//ставимо текст куди треба
+		align-content: end;					//ставимо текст куди треба
+		text-align: center;
+		transition: 0.5s;
+
+		&:hover .operator__item  {	// &__item
+			visibility: visible;				//покапзали ІКОНКИ
+			opacity: 1;
+		}
+}
+
+//блок з іконками, що зникають
+		&__item {		 //.operator__item
+			display: flex;			//для иконок соц.сетей
+			justify-content: space-between;
+			gap: 30px;				//для иконок соц.сетей
+			margin-bottom: 50px;
+			
+			position: relative;			//витягли наверх icon
+			z-index: 3;					//витягли наверх icon
+
+			visibility: hidden;				//сховали ІКОНКИ
+			transition: 0.5s;
+			opacity: 0;
+
+		// .operator-item__link
+		&-link {					//оболонка для усіх link
+			background-color: rgb(5, 130, 226, 0.3);
+			padding: 20px;
+			@media (max-width:992px){
+				padding: 10px;
+			}
+		}
+
+		// .operator-item__link--1
+		&-link--1 {					//звертаємося окремо до кожної link 1
+			transition: 0.5s;
+
+			&:hover {
+				transform: rotate(-360deg);
+			}
+		}
+
+		// .operator-item__link--2
+		&-link--2 {					//звертаємося окремо до кожної link 2
+			transition: 0.5s;
+			&:hover {
+				transform: rotate(-360deg);
+			}
+		}
+
+		// .operator-item__link--3
+		&-link--3 {					//звертаємося окремо до кожної link 3
+			transition: 0.5s;
+			&:hover {
+				transform: rotate(-360deg);
+			}
+		}
+	}
+//блок з іконками, що зникають
+
+
+	// .operator__img
+	// &__img {}
+
+	&__img img {						//САМЕ ФОТО
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+
+	// .operator__text
+	&__text {					//для оболонки с текстом 
+		position: relative;			//витягуємо текст на верх
+		z-index: 2;					//витягуємо текст на верх
+		color: #0f0f0f;
+		padding: 10px;
+		max-width: 320px;			//280px+20px+20px
+
+		background-color: rgb(193, 192, 192, 0.3);
+	}
+}
+
+.operaror {
+	// .operaror__name
+	&__name {
+		font-size: 25px;
+		line-height: 130%;
+		font-family: 'CoreSansC-95Blac';
+		font-weight: 900;
+		@media (max-width:992px){
+			font-size: 20px;
+		}
+	}
+
+	// .operaror__profession
+	&__profession {
+		font-size: 20px;
+		font-family: 'CoreSansC-500';
+		font-weight: 500;
+		line-height: 130%;
+		@media (max-width:992px){
+			font-size: 16px;
+		}
+	}
+}
+
+
+//------------------------------------------------------------------------
+

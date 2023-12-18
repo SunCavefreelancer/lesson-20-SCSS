@@ -17,7 +17,7 @@
     left: 0;
     width: 100%;
     height: 100%; /* т.е. на ВЕСЬ РАЗМЕР НАШЕЙ ШАПОЧКИ */
-    background-color: rgb(9, 116, 255);
+    background-color: rgba(9, 144, 255, 0.794);
     z-index: 2;
 }
 /* -------------------------------------- */
@@ -82,14 +82,13 @@
 
 .menu__item--vip .menu__link {
 	/* звертаємося одразу до 2х класів */
-	font-weight: 700;
 	text-decoration: underline;
-	color: #d58417;
+	color: rgb(13, 242, 82);
 }
 
 /* пункти меню */
 .menu__link {
-	color: #000;
+	color: #e9e5e5;
 	font-family: 'Merriweather';
 	font-size: 20px;
 	transition: color 0.3s;
@@ -124,12 +123,12 @@
 		/* звертаємось  одразу до 2 тегів*/
 		content: '';
 		display: inline-block;
-		background-image: url(../img/arrow.png);
+		background-image: url(../img/arrow_down_icon.png);
 		background-repeat: no-repeat;
 		background-position: center;
-		width: 16px;
-		height: 8px;
-		flex: 0 0 16px;
+		width: 26px;
+		height: 18px;
+		flex: 0 0 26px;
 
 		transition: transform 0.3s;
 		/* для руху стрілки */
@@ -176,7 +175,7 @@
 	/* ширина фона sub-menu */
 	border-radius: 15px;
 	padding: 15px;
-	background-color: #ebebb9;
+	background-color: #b9daeb;
 	/* color фона sub-menu */
 }
 
@@ -187,7 +186,7 @@
 }
 
 .sub-menu__link {
-	color: #fff;
+	color: #5c5a5a;
 	font-size: 18px;
 	transition: all 0.3s;
 }
@@ -197,6 +196,7 @@
 	/* прибираємо -hover- на тачюскрінах */
 	.sub-menu__link:hover {
 		text-decoration: underline;
+		color: rgb(68, 68, 255);
 	}
 }
 

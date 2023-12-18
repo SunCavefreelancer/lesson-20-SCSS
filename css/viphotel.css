@@ -1,0 +1,41 @@
+/* // Підключення шрифтів */
+@import "_fonts.scss";
+/* // Скидання стилів */
+@import "_reset.scss";
+/* // Компоненти, сторінки */
+@import "header.css";
+/* // Компоненти, сторінки */
+@import "_footer.scss";
+/* // Компоненти, сторінки */
+@import "_viphotel.scss";
+
+
+
+body {
+	background-color: rgb(2, 66, 177);
+}
+.menu-open body {
+	overflow: hidden;			/* щоб не скролився сайт при адаптиві */
+}
+
+
+.wrapper {
+	overflow: clip;
+	min-height: 100%;
+	
+
+	display: flex;			/* //прижимаем футер книзу */
+	flex-direction: column; /* //прижимаем футер книзу */
+}
+.wrapper main {
+	flex-grow: 1;			/* //прижимаем футер книзу */
+}
+
+
+/* // для усіх "__container" однаково */
+[class*="__container"] {
+	max-width: 1270px;/* 1240 + 15 + 15 */
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}

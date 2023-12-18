@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/viphotel.style.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>lesson 20 SCSS</title>
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+
+				<div class="header__logo">Holiday-Tour</div> <!-- logo -->
+
+				<div class="menu"> <!-- menu -->
+					<div class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="index.html" class="menu__link">About Us</a>
+							</li>
+							<li class="menu__item menu__item--parent">
+								<!-- menu__item--parent модифікатор для стрілки вниз -->
+								<a href="#" class="menu__link">Hotels</a>
+								<div class="sub-menu"> <!-- вкладаємо 2 блок меню -->
+									<ul class="sub-menu__list">
+										<li class="sub-menu__item">
+											<a href="#" class="sub-menu__link">1 Hotels in Mexico</a>
+										</li>
+										<li class="sub-menu__item">
+											<a href="#" class="sub-menu__link">2 Hotels in Thailand</a>
+										</li>
+										<li class="sub-menu__item">
+											<a href="#" class="sub-menu__link">3 Dominican hotels</a>
+										</li>
+										<li class="sub-menu__item">
+											<a href="#" class="sub-menu__link">4 USA hotels</a>
+										</li>
+									</ul>
+								</div> <!-- вкладаємо 2 блок меню -->
+							</li>
+							<li class="menu__item menu__item--parent  menu__item--vip">
+								<!-- menu__item--parent модифікатор для стрілки вниз -->
+								<a href="#" class="menu__link">Offers</a>
+								<div class="sub-menu"> <!-- вкладаємо 2 блок меню -->
+									<ul class="sub-menu__list">
+										<li class="sub-menu__item">
+											<a href="#" class="sub-menu__link">1 Malta beach</a>
+										</li>
+										<li class="sub-menu__item">
+											<a href="#" class="sub-menu__link">2 Guatemala</a>
+										</li>
+										<li class="sub-menu__item">
+											<a href="#" class="sub-menu__link">3 USA on jeeps</a>
+										</li>
+										<li class="sub-menu__item">
+											<a href="#" class="sub-menu__link">4 Cambodia</a>
+										</li>
+										<li class="sub-menu__item">
+											<a href="viphotel.html" class="sub-menu__link">5 Popular VIP hotels</a>
+										</li>
+									</ul>
+								</div> <!-- вкладаємо 2 блок меню -->
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Search for a tour</a>
+							</li>
+							<li class="menu__item menu__item--parent">
+								<!-- menu__item--parent модифікатор для стрілки вниз -->
+								<a href="#" class="menu__link">Management</a>
+								<div class="sub-menu"> <!-- вкладаємо 2 блок меню -->
+									<ul class="sub-menu__list">
+										<li class="sub-menu__item">
+											<a href="#" class="sub-menu__link">Director</a>
+										</li>
+										<li class="sub-menu__item">
+											<a href="#" class="sub-menu__link">Manager Diana</a>
+										</li>
+										<li class="sub-menu__item">
+											<a href="#" class="sub-menu__link">Manager Olmany</a>
+										</li>
+										<li class="sub-menu__item">
+											<a href="#" class="sub-menu__link">Product manager Isabella</a>
+										</li>
+										<li class="sub-menu__item">
+											<a href="#" class="sub-menu__link">Development Departament Cary</a>
+										</li>
+										<li class="sub-menu__item">
+											<a href="#" class="sub-menu__link">Head of Sales Department Dorothy</a>
+										</li>
+									</ul>
+								</div> <!-- вкладаємо 2 блок меню -->
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Contact</a>
+							</li>
+						</ul>
+					</div>
+				</div> <!-- menu -->
+
+				<div class="header__actions actions__header"> <!-- icons right -->
+					<a href="#" class="actions__header__item">
+						<img src="img/icon01.svg" alt="favorite">
+						<span>1</span>
+					</a>
+					<a href="#" class="actions__header__item">
+						<img src="img/icon02.svg" alt="cart">
+						<span>2</span>
+					</a>
+
+
+					<button class="icon-menu"> <!-- это будет бургер меню ГОРИЗОНТАЛЬНЫЕ ПОЛОСКИ  -->
+						<span></span> <!-- здесь будем рисовать СРЕДНЮЮ ПОЛОСКУ МЕНЮ  -->
+					</button>
+				</div>
+
+			</div>
+		</header>
+
+		<main class="main">
+			<section class="viphotel">
+				<div class="viphotel__container">
+					<h2>Popular VIP hotels</h2>
+					<div class="viphotel__card"><!-- cards -->
+						<div class="viphotel__item"><!-- acrd 1 -->
+							<div class="viphotel__img">
+								<img src="hotel/01.webp" alt="hotel">
+							</div>
+							<div class="viphotel__title">
+								Hilton La Romana Family Resort & Spa, 5<span></span>
+							</div>
+							<div class="viphotel__sub-title">
+								Dominican Republic, La Romana
+							</div>
+							<div class="viphotel__reviews">
+								4.8 (5 reviews)
+							</div>
+							<div class="viphotel__price">
+								from UAH 224,846<br>Price per tour (2 adults)
+							</div>
+							<button class="viphotel__button" >viphotel__price</button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__logo">Holiday-Tour</div>
+				<div class="footer__columns">
+					<div class="footer__item"><!-- column 1 -->
+						<div class="footer__text">
+							Follow us on:
+						</div>
+						<div class="footer__icons">
+							<img src="icon/fasebook.png" alt="icon">
+							<img src="icon/youtoobe.png" alt="icon">
+							<img src="icon/instagram.png" alt="icon">
+							<img src="icon/G+.png" alt="icon">
+							<img src="icon/Up.png" alt="icon">
+							<img src="icon/Line.png" alt="icon">
+						</div>
+						<a href="+1-646-956-2012" class="footer__tel">+1-646-956-2012</a>		<!-- виводимо одразу на телефон -->
+						<div class="footer__adress">
+							<p>16 East 34th Street, 15th Floor,
+								New York,<br> NY 10016
+							</p>
+						</div>
+						<a href="#" class="footer__button">
+							<span>Get ouor free extension</span>
+						</a>
+					</div>
+
+
+					<div class="footer__item"><!-- column 2 -->
+						<div class="footer__title">About Us</div>
+						<div class="footer__sub-title">
+							<ul class="footer__list">
+								<li class="footer__link">Why is it worth going on a trip with us?</li>
+								<li class="footer__link">Travel calendar</li>
+								<li class="footer__link">Document</li>
+							</ul>
+						</div>
+						<div class="footer__title">Hotels</div>
+						<div class="footer__sub-title">
+							<ul class="footer__list">
+								<li class="footer__link">Search for a tour</li>
+								<li class="footer__link">Where can I buy</li>
+								<li class="footer__link">Insurance</li>
+							</ul>
+						</div>
+					</div>
+
+
+					<div class="footer__item"><!-- column 3 -->
+						<div class="footer__title">Last minute offers</div>
+						<div class="footer__sub-title">
+							<ul class="footer__list">
+								<li class="footer__link">Digital Research</li>
+								<li class="footer__link">Intelligence</li>
+								<li class="footer__link">Digital Marketing</li>
+								<li class="footer__link">Intelligence</li>
+								<li class="footer__link">Shopper Intelligence</li>
+								<li class="footer__link">Sales Intelligence</li>
+								<li class="footer__link">Stock Intelligence</li>
+								<li class="footer__link">Advisory Services</li>
+							</ul>
+						</div>
+					</div>
+
+
+					<div class="footer__item"><!-- column 4 -->
+						<div class="footer__title">Search for a tour</div>
+						<div class="footer__sub-title">
+							<ul class="footer__list">
+								<li class="footer__link">Guatemala</li>
+								<li class="footer__link">USA</li>
+								<li class="footer__link">Mexico</li>
+								<li class="footer__link">Combodia</li>
+								<li class="footer__link">Rio</li>
+								<li class="footer__link">Malta</li>
+							</ul>
+						</div>
+					</div>
+
+
+					<div class="footer__item"><!-- column 4 -->
+						<div class="footer__title">Search for a tour</div>
+						<div class="footer__sub-title">
+							<ul class="footer__list">
+								<li class="footer__link">Yellowstone</li>
+								<li class="footer__link">Vietnam</li>
+								<li class="footer__link">Guatemala</li>
+								<li class="footer__link">Antarctica</li>
+								<li class="footer__link">Thailand</li>
+								<li class="footer__link">Dominican Repablic</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+
+	
+	<script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,5 +1,7 @@
 /* Підключення шрифту в ручну*/
 @import url('https://fonts.googleapis.com/css?family=Inter:400,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700,700italic&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:800&display=swap');
 
 /* Шрифт № 1 */
 @font-face {

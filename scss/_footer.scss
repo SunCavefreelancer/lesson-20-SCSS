@@ -1,0 +1,217 @@
+//--------------footer-----------------footer---------------footer--------------------------
+
+.footer {
+	padding: 50px 0;
+	color: #fff;
+
+	// .footer__logo
+	&__logo {
+		color: #000;
+		font-family: 'Merriweather';
+		font-size: 30px;
+		font-style: italic;
+		font-weight: 700;
+		line-height: 1.26;
+		flex-shrink: 0;
+		/* щоб логотип не переносився на другий рядок при зменшенні екрану */
+	
+		position: relative;
+		/* дістаємо наверх для адаптиву */
+		z-index: 5;
+		/* дістаємо наверх для адаптиву */
+		margin-bottom: 20px;
+	}
+
+	// .footer__columns
+	&__columns {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		column-gap: 20px;
+		row-gap: 30px;
+		@media (max-width:1270px){
+			grid-template-columns: repeat(4, 1fr);
+		}
+		@media (max-width:1017px){
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@media (max-width:767px){
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width:540px){
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	// .footer__item (card 1, 2, 3...)
+	&__item {
+		display: grid;
+		row-gap: 10px;			//для усіх елементів відсутп вниз 10рх
+		font-family: 'Merriweather';
+		font-weight: 500;
+		line-height: 130%;
+
+		display: grid;
+		justify-content: start;
+		align-content: start;
+	&>:last-child {
+		margin-bottom: 0;
+	}
+}
+
+	// .footer__text
+	&__text {
+		font-family: 'CoreSansC-500';
+		font-weight: 500;
+	}
+
+	// .footer__icons
+	&__icons img{
+		width: 30px;
+		height: 30px;
+		background-color: #ffffff;
+		padding: 4px;
+		border-radius: 50%;
+		margin-bottom: 20px;
+		transition: 0.5s;
+		&:hover {
+			transform: rotate(-360deg);
+			cursor: pointer;
+			}
+		}
+
+	// .footer__tel
+	&__tel {
+		display: flex;
+		gap: 16px;
+		font-size: 14px;
+		font-family: 'Montserrat';
+		color: #ffffff99;
+		transition: 0.4s;
+		&:hover {
+			text-decoration: underline;
+		}
+		& p {								//ставимо по центру текст
+			display: grid;
+			justify-content: center;
+			align-content: center;
+		}
+		&::before {							//додаємомо еконку
+			content: "";
+			background-image: url(../icon/tel.png);
+			background-repeat: no-repeat;
+			background-position: 0 0;
+			background-size: contain;
+			width: 24px;
+			height: 24px;
+			flex: 0 0 24px;
+			transform: translateY(-5px);
+		}
+	}
+
+
+	// .footer__adress
+	&__adress {
+		display: flex;
+		gap: 16px;
+		font-size: 14px;
+		color: #ffffff99;
+		font-family: 'Montserrat';
+		& p {		//ставимо по центру текст
+			display: grid;
+			justify-content: center;
+			align-content: center;
+			line-height: 150%;
+		}
+		&::before {							//додаємомо еконку
+			content: "";
+			background-image: url(../icon/geo.png);
+			background-repeat: no-repeat;
+			background-position: 0 0;
+			background-size: contain;
+			width: 24px;
+			height: 24px;
+			flex: 0 0 24px;
+		}
+	}
+
+	&__adress img {
+		margin-right: 16px;
+	}
+
+	// .footer__button
+	&__button {
+		& span {
+			display: inline-block;
+			background-color: #195afe;
+			font-family: 'CoreSansC-500';
+
+			display: flex;
+			gap: 6px;
+
+			line-height: 120%;
+			border-radius: 20px;
+			font-size: 14px;
+			padding: 10px 20px;
+			margin-top: 20px;
+			margin-bottom: 24px;
+			transition: 0.5s;
+			border: 1px solid transparent;
+			&::before {
+				content: "";
+				display: inline-block;
+				background-image: url(../img/icon01.svg);
+				background-repeat: no-repeat;
+				background-position: 0 0;
+				background-size: contain;
+				width: 14px;
+				height: 14px;
+				flex: 0 0 14px;
+				margin-right: 6px;
+				transform: translateY(2px);
+				&:hover {
+					background-color: #ef1a1a;
+				}
+			}
+			&:hover {
+				cursor: pointer;
+				background-color: #02147c4a;
+				border: 1px solid #fff;
+			}
+			}
+		}
+
+
+//------------------column 2---3---4-----------------
+	// .footer__title
+	&__title {
+		padding: 4px 0;
+		color: #fff;
+		font-size: 18px;
+		font-family: 'CoreSansC-500';
+		font-weight: 500;
+		margin-bottom: 8px;
+	}
+
+	// .footer__sub-title
+	&__sub-title {
+		color: #ffffff99;
+		font-family: 'Montserrat';
+
+	}
+
+	&__list {
+		transition: 0.4s;
+	&>*:not(:last-child) {
+			margin-bottom: 8px;
+		}
+	}
+	&__link {
+		&:hover {
+			text-decoration: underline;
+			cursor: pointer;
+		}
+	}
+
+}
+
+//-----------------------------------footer--------------------------------

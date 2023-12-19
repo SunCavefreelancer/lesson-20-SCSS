@@ -1,6 +1,6 @@
-///* --------------------------------viphotel----------page----------------------------- */
+///* --------------------------------Combodgia----page---------------------------------- */
 
-.viphotel {
+.сombodia {
 	padding: 160px 0 100px 0;
 	@media (max-width:992px){
 		padding: 80px 0 70px 0;
@@ -154,7 +154,7 @@
 		animation-fill-mode: forwards;             /*у кінцевому положенні*/
 	}
 	
-	// .viphotel__card
+	// .combodgia__card
 	&__card {				//CARDS
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));		//тут робимо за допомогою грід
@@ -177,18 +177,12 @@
 		transform: rotateZ(360deg);
 	}
 }
-	// .viphotel__item 		//CARD
+	// .combodgia__item 		//CARD
 	&__item {
 		border: 1px solid rgba(2, 62, 122, 0.503);
 		background-color: #fff;
 		border-radius: 20px;
 		box-shadow: 1px 1px 20px rgb(6, 77, 143);
-
-		//ПРИБИВАЕМ КНОПКУ КНИЗУ КАРТЫ
-		display: flex;
-		flex-direction: column;
-		min-height: 100%;
-		//ПРИБИВАЕМ КНОПКУ КНИЗУ КАРТЫ
 		&>*:last-child {
 			margin-bottom: 0;
 		}
@@ -242,7 +236,7 @@
 			}
 	}
 
-	// .viphotel__img
+	// .combodgia__img
 	&__img {
 		overflow: hidden;				//--класний ефект збільшення фото
 		border-top-left-radius: 20px;	//саме тут треба писати такий border
@@ -263,14 +257,11 @@
 	}
 
 
-	//._viphotel__text 			//---ОБОЛОЧКА ТЕКСТА
+	//._viphotel__text
 	&__text {
 		padding: 20px;
-		//ПРИБИВАЕМ КНОПКУ КНИЗУ КАРТЫ
-		display: flex;
-		flex-direction: column;
-		flex-grow: 1;
-		//ПРИБИВАЕМ КНОПКУ КНИЗУ КАРТЫ
+/* 		display: flex;
+		flex-direction: column; */
 		&>:last-child {
 			margin-bottom: 0;
 		}
@@ -327,7 +318,6 @@
 
 	// .viphotel__price
 	&__price {
-		//ПРИБИВАЕМ КНОПКУ КНИЗУ КАРТЫ
 		flex-grow: 1;
 		color: red;
 		font-size: 25px;
@@ -344,6 +334,7 @@
 	}
 
 	// .viphotel__button
+	// .footer__button
 	&__button {
 		& span {
 			background-color: #195afe;

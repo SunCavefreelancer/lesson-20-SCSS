@@ -1,6 +1,6 @@
-///* --------------------------------viphotel----------page----------------------------- */
+///* --------------------------------usa----page----------------------------------- */
 
-.viphotel {
+.usa {
 	padding: 160px 0 100px 0;
 	@media (max-width:992px){
 		padding: 80px 0 70px 0;
@@ -18,7 +18,7 @@
 			font-family: 'CoreSansC-500';
 			font-weight: 500;
 			color: #212121;
-			margin-bottom: 50px;
+			margin-bottom: 20px;
 			position: relative;
 			z-index: 2;
 			& span {
@@ -157,10 +157,16 @@
 	// .viphotel__card
 	&__card {				//CARDS
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));		//тут робимо за допомогою грід
+		grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));		//тут робимо за допомогою грід
 		gap: 20px;
 		position: relative;				//ставимо картки наверх декору кругів
 		z-index: 5;						//ставимо картки наверх декору кругів
+		@media (max-width:645px){
+			grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+		}
+		@media (max-width:535px){
+			grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+		}
 	}
 	
 
@@ -177,10 +183,15 @@
 		transform: rotateZ(360deg);
 	}
 }
-	// .viphotel__item 		//CARD
+	// .usa__item 		//---CARD---
 	&__item {
-		border: 1px solid rgba(2, 62, 122, 0.503);
-		background-color: #fff;
+		&--01 {			//модифікатор (картки)
+			border: 1px solid transparent;
+			background-color: transparent;
+			box-shadow: none;
+		}
+		border: 1px solid rgba(2, 62, 122, 0.503);	//(картка)
+		background-color: #f1e4e4d4;
 		border-radius: 20px;
 		box-shadow: 1px 1px 20px rgb(6, 77, 143);
 
@@ -204,7 +215,8 @@
 		animation-delay: 0.0s;                     /*затримка анімації*/
 		animation-fill-mode: forwards;             /*у кінцевому положенні*/
 		}
-				// анімація для КАРТКИ 2
+
+		// анімація для КАРТКИ 2
 				&:nth-child(2) {
 					//----------------анімація для карток ------------
 					//приєднали сценарій
@@ -242,29 +254,42 @@
 			}
 	}
 
-	// .viphotel__img
+	// .usa__img
 	&__img {
 		overflow: hidden;				//--класний ефект збільшення фото
 		border-top-left-radius: 20px;	//саме тут треба писати такий border
 		border-top-right-radius:20px;	//саме тут треба писати такий border
+		&--small {			//модифікатор (маленька фотографія)
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));		//тут робимо за допомогою грід
+			gap: 5px;
+			@media (max-width:645px){
+				grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+			}
+			@media (max-width:535px){
+				grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+			}
+		}
 	}
 
 	&__img img{						//робимо за допомогою FLEX
 		width: 100%;				//робимо за допомогою FLEX
 		height: 100%;
 		object-fit: cover;			//--робимо за допомогою FLEX
-		aspect-ratio: 400 / 300;	//--робимо за допомогою FLEX /* значення по макету */
+		aspect-ratio: 600 / 300;	//--робимо за допомогою FLEX /* значення по макету */
 		transition: all 0.8s ease;
 		&:hover {
 			transform: scale(1.2);			//--класний ефект збільшення фото
-			border-top-left-radius: 20px;	//саме тут треба писати такий border
-			border-top-right-radius:20px;	//саме тут треба писати такий border
+			border-top-left-radius: 20px;
+			border-top-right-radius:20px;
 		}
-	}
+}
 
-
-	//._viphotel__text 			//---ОБОЛОЧКА ТЕКСТА
+	//._usa__text 		//---ОБОЛОЧКА ТЕКСТА---
 	&__text {
+		&--01 {
+			text-align: center;
+		}
 		padding: 20px;
 		//ПРИБИВАЕМ КНОПКУ КНИЗУ КАРТЫ
 		display: flex;
@@ -276,74 +301,64 @@
 		}
 	}
 
-	// .viphotel__title
+	// .usa__title
 	&__title {
+		&--01 {
+			color: #fff;
+			text-shadow: 2px 2px 2px #000;
+			font-size: 30px;
+		}
 		color: #57a9fb;
 		font-size: 25px;
 		line-height: 130%;
 		margin-bottom: 10px;
 		text-shadow: 1px 1px 2px #2b2a2a;
+		@media (max-width:535px){
+			font-size: 20px;			
+		}
 	}
 
-	// .viphotel__sub-title
+	// .usa__sub-title
 	&__sub-title {
-		font-family: 'Merriweather';
+		&--01 {			//модифікатор
+			color: #fff;
+			line-height: 135%;
+			text-shadow: 2px 2px 2px #000;
+		}
+		font-family: 'Merriweather';	//sub-title
+		font-weight: 700;
 		font-size: 18px;
-		color: rgb(65, 64, 64);
+		color: rgb(14, 13, 13);
 		margin-bottom: 15px;
+		@media (max-width:535px){
+			font-size: 16px;
+		}
 	}
 
-	// .viphotel__reviews
+	// .usa__reviews
 	&__reviews {
-		color: rgb(65, 64, 64);
+		color: rgb(63, 33, 33);
+		text-shadow: 2px 2px 2px #ffffff;
+		line-height: 150%;
 		font-family: 'Merriweather';
-		font-weight: 700;
-		margin-bottom: 25px;
+		margin-bottom: 10px;
 
 		align-items: center;			//вирівнюємо полоску відносно тексту
-
-		display: flex;
-		gap: 8px;
-		&::after {
-			background-image: url(../hotel/stars.png);
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: contain;
-			content: '';
-			width: 10px;
-			height: 10px;
-			flex: 0 0 10px;
-			display: inline-block;
-		}
-		&::before {
-			content: '';
-			display: inline-block;
-			width: 65px;
-			height: 5px;
-			flex: 0 0 65px;
-			background-color: turquoise;
-		}
 	}
 
-	// .viphotel__price
+	// .usa__price
 	&__price {
 		//ПРИБИВАЕМ КНОПКУ КНИЗУ КАРТЫ
 		flex-grow: 1;
+		//ПРИБИВАЕМ КНОПКУ КНИЗУ КАРТЫ
 		color: red;
 		font-size: 25px;
 		font-family: 'CoreSansC-500';
 		font-weight: 500;
 		line-height: 130%;
-		margin-bottom: 25px;
-		& span {
-			color: rgb(65, 64, 64);
-			font-family: 'CoreSansC-500';
-			font-weight: 500;
-			font-size: 20px;
-		}
+		margin-bottom: 5px;
 	}
 
-	// .viphotel__button
 	&__button {
 		& span {
 			background-color: #195afe;
@@ -361,7 +376,7 @@
 			font-size: 14px;
 			padding: 10px 20px;
 			margin-top: 20px;
-			margin-bottom: 24px;
+			margin-bottom: 10px;
 			transition: 0.5s;
 			border: 1px solid transparent;
 			&::before {
@@ -386,5 +401,5 @@
 			}
 			
 		}
-}
+	}
 }

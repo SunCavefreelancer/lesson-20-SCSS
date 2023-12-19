@@ -1,6 +1,6 @@
 ///* --------------------------------viphotel----------page----------------------------- */
 
-.viphotel {
+.malta {
 	padding: 160px 0 100px 0;
 	@media (max-width:992px){
 		padding: 80px 0 70px 0;
@@ -154,7 +154,7 @@
 		animation-fill-mode: forwards;             /*у кінцевому положенні*/
 	}
 	
-	// .viphotel__card
+	// .malta__card
 	&__card {				//CARDS
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));		//тут робимо за допомогою грід
@@ -177,7 +177,7 @@
 		transform: rotateZ(360deg);
 	}
 }
-	// .viphotel__item 		//CARD
+	// .malta__item 		//CARD
 	&__item {
 		border: 1px solid rgba(2, 62, 122, 0.503);
 		background-color: #fff;
@@ -242,7 +242,7 @@
 			}
 	}
 
-	// .viphotel__img
+	// .malta__img
 	&__img {
 		overflow: hidden;				//--класний ефект збільшення фото
 		border-top-left-radius: 20px;	//саме тут треба писати такий border
@@ -263,7 +263,7 @@
 	}
 
 
-	//._viphotel__text 			//---ОБОЛОЧКА ТЕКСТА
+	//.malta__text 			//---ОБОЛОЧКА ТЕКСТА
 	&__text {
 		padding: 20px;
 		//ПРИБИВАЕМ КНОПКУ КНИЗУ КАРТЫ
@@ -276,29 +276,47 @@
 		}
 	}
 
-	// .viphotel__title
+	// .malta__title
 	&__title {
 		color: #57a9fb;
 		font-size: 25px;
 		line-height: 130%;
 		margin-bottom: 10px;
 		text-shadow: 1px 1px 2px #2b2a2a;
+		& span {
+			color: #2b2a2a;
+			font-weight: 600;
+			text-shadow: none;
+		}
 	}
 
-	// .viphotel__sub-title
+
+	// .malta__sub-title
 	&__sub-title {
 		font-family: 'Merriweather';
 		font-size: 18px;
+		line-height: 130%;
 		color: rgb(65, 64, 64);
-		margin-bottom: 15px;
+		margin-bottom: 5px;
 	}
 
-	// .viphotel__reviews
+
+	// .malta__time
+	&__time {
+		font-family: 'Merriweather';
+		font-size: 15px;
+		line-height: 130%;
+		color: rgb(65, 64, 64);
+		margin-bottom: 10px;
+		text-decoration: underline;
+	}
+
+	// .malta__reviews
 	&__reviews {
 		color: rgb(65, 64, 64);
 		font-family: 'Merriweather';
 		font-weight: 700;
-		margin-bottom: 25px;
+		margin-bottom: 15px;
 
 		align-items: center;			//вирівнюємо полоску відносно тексту
 
@@ -325,7 +343,7 @@
 		}
 	}
 
-	// .viphotel__price
+	// .malta__price
 	&__price {
 		//ПРИБИВАЕМ КНОПКУ КНИЗУ КАРТЫ
 		flex-grow: 1;
@@ -334,7 +352,7 @@
 		font-family: 'CoreSansC-500';
 		font-weight: 500;
 		line-height: 130%;
-		margin-bottom: 25px;
+		margin-bottom: 5px;
 		& span {
 			color: rgb(65, 64, 64);
 			font-family: 'CoreSansC-500';
@@ -343,7 +361,16 @@
 		}
 	}
 
-	// .viphotel__button
+	// .malta__bron`
+	&__bron {
+		color: rgb(133, 2, 2);
+		font-size: 15px;
+		font-family: 'CoreSansC-500';
+		font-weight: 500;
+		line-height: 120%;
+	}
+
+	// .malta__button
 	&__button {
 		& span {
 			background-color: #195afe;

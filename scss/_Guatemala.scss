@@ -1,6 +1,6 @@
-///* --------------------------------viphotel----------page----------------------------- */
+///* --------------------------------Guatemala----------page----------------------------- */
 
-.viphotel {
+.guatemala {
 	padding: 160px 0 100px 0;
 	@media (max-width:992px){
 		padding: 80px 0 70px 0;
@@ -154,11 +154,12 @@
 		animation-fill-mode: forwards;             /*у кінцевому положенні*/
 	}
 	
-	// .viphotel__card
+	// .guatemala__card
 	&__card {				//CARDS
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));		//тут робимо за допомогою грід
+		grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));		//тут робимо за допомогою грід
 		gap: 20px;
+		
 		position: relative;				//ставимо картки наверх декору кругів
 		z-index: 5;						//ставимо картки наверх декору кругів
 	}
@@ -177,10 +178,10 @@
 		transform: rotateZ(360deg);
 	}
 }
-	// .viphotel__item 		//CARD
+	// .guatemala__item 		//--------------CARD----------------
 	&__item {
 		border: 1px solid rgba(2, 62, 122, 0.503);
-		background-color: #fff;
+		background-color: #f6f3f3d4;
 		border-radius: 20px;
 		box-shadow: 1px 1px 20px rgb(6, 77, 143);
 
@@ -242,13 +243,14 @@
 			}
 	}
 
-	// .viphotel__img
+	// .guatemala__img
 	&__img {
 		overflow: hidden;				//--класний ефект збільшення фото
 		border-top-left-radius: 20px;	//саме тут треба писати такий border
 		border-top-right-radius:20px;	//саме тут треба писати такий border
 	}
 
+	// .guatemala__img img
 	&__img img{						//робимо за допомогою FLEX
 		width: 100%;				//робимо за допомогою FLEX
 		height: 100%;
@@ -263,7 +265,7 @@
 	}
 
 
-	//._viphotel__text 			//---ОБОЛОЧКА ТЕКСТА
+	//._guatemala__text 			//---ОБОЛОЧКА ТЕКСТА
 	&__text {
 		padding: 20px;
 		//ПРИБИВАЕМ КНОПКУ КНИЗУ КАРТЫ
@@ -276,56 +278,62 @@
 		}
 	}
 
-	// .viphotel__title
+	// .guatemala__title
 	&__title {
-		color: #57a9fb;
+		color: #0a35e3;
 		font-size: 25px;
+		font-weight: 600;
 		line-height: 130%;
 		margin-bottom: 10px;
 		text-shadow: 1px 1px 2px #2b2a2a;
 	}
 
-	// .viphotel__sub-title
+	// .guatemala__sub-title
 	&__sub-title {
-		font-family: 'Merriweather';
+		font-family: 'Inter';
 		font-size: 18px;
-		color: rgb(65, 64, 64);
-		margin-bottom: 15px;
+		color: rgb(85, 111, 245);
+		margin-bottom: 10px;
 	}
 
-	// .viphotel__reviews
+	// .guatemala__reviews
 	&__reviews {
 		color: rgb(65, 64, 64);
-		font-family: 'Merriweather';
-		font-weight: 700;
-		margin-bottom: 25px;
-
-		align-items: center;			//вирівнюємо полоску відносно тексту
+		font-family: 'Inter';
+		line-height: 130%;
+		margin-bottom: 5px;
 
 		display: flex;
 		gap: 8px;
 		&::after {
-			background-image: url(../hotel/stars.png);
-			background-position: center;
-			background-repeat: no-repeat;
+			content: '';
+			display: inline-block;
+			background-image: url(../icon/trophy.png);
+			background-position: 0 0;
 			background-size: contain;
-			content: '';
-			width: 10px;
-			height: 10px;
-			flex: 0 0 10px;
-			display: inline-block;
+			background-repeat: no-repeat;
+			width: 22px;
+			height: 22px;
+			flex: 0 0 22px
 		}
-		&::before {
-			content: '';
+
+		align-items: center;			//вирівнюємо полоску відносно тексту
+	}
+
+	//.guatemala__services
+	&__services {
+		color: #a9a5a5;
+		line-height: 130%;
+		margin-bottom: 15px;
+		font-family: 'Inter';
+		& span {
+			color: rgba(85, 112, 245, 0.792);
+			margin-bottom: 10px;
 			display: inline-block;
-			width: 65px;
-			height: 5px;
-			flex: 0 0 65px;
-			background-color: turquoise;
 		}
 	}
 
-	// .viphotel__price
+	// .guatemala__price
 	&__price {
 		//ПРИБИВАЕМ КНОПКУ КНИЗУ КАРТЫ
 		flex-grow: 1;
@@ -334,7 +342,7 @@
 		font-family: 'CoreSansC-500';
 		font-weight: 500;
 		line-height: 130%;
-		margin-bottom: 25px;
+		margin-bottom: 5px;
 		& span {
 			color: rgb(65, 64, 64);
 			font-family: 'CoreSansC-500';
@@ -343,7 +351,7 @@
 		}
 	}
 
-	// .viphotel__button
+	// .guatemala__button
 	&__button {
 		& span {
 			background-color: #195afe;
@@ -361,7 +369,7 @@
 			font-size: 14px;
 			padding: 10px 20px;
 			margin-top: 20px;
-			margin-bottom: 24px;
+			margin-bottom: 8px;
 			transition: 0.5s;
 			border: 1px solid transparent;
 			&::before {
@@ -388,3 +396,4 @@
 		}
 }
 }
+

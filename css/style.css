@@ -552,9 +552,17 @@ textarea {
 .viphotel__item {
   border: 1px solid rgba(2, 62, 122, 0.503);
   background-color: #fff;
-  border-radius: 28px;
+  border-radius: 20px;
   -webkit-box-shadow: 1px 1px 20px rgb(6, 77, 143);
           box-shadow: 1px 1px 20px rgb(6, 77, 143);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
 }
 .viphotel__item > *:last-child {
   margin-bottom: 0;
@@ -625,7 +633,8 @@ textarea {
 }
 .viphotel__img {
   overflow: hidden;
-  border-radius: 10% 10% 0% 0%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 .viphotel__img img {
   width: 100%;
@@ -633,7 +642,6 @@ textarea {
   -o-object-fit: cover;
      object-fit: cover;
   aspect-ratio: 400/300;
-  border-radius: 10% 10% 0% 0%;
   -webkit-transition: all 0.8s ease;
   transition: all 0.8s ease;
 }
@@ -641,12 +649,21 @@ textarea {
   -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
           transform: scale(1.2);
-  border-radius: 10% 10% 0% 0%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 .viphotel__text {
   padding: 20px;
-  /* 		display: flex;
-  		flex-direction: column; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 .viphotel__text > :last-child {
   margin-bottom: 0;
@@ -757,6 +774,2101 @@ textarea {
           transform: translateY(2px);
 }
 .viphotel__button span:hover {
+  cursor: pointer;
+  background-color: turquoise;
+  border: 1px solid #859af4;
+  -webkit-transform: translateY(5px);
+      -ms-transform: translateY(5px);
+          transform: translateY(5px);
+  -webkit-box-shadow: 5px 5px 20px #4f68f7;
+          box-shadow: 5px 5px 20px #4f68f7;
+}
+
+.сombodia {
+  padding: 160px 0 100px 0;
+  background: #54c0ff url(../img/Vector01.png);
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-position: 0 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  /*-----сценарій анімації---для декору---*/
+}
+@media (max-width: 992px) {
+  .сombodia {
+    padding: 80px 0 70px 0;
+  }
+}
+.сombodia__container h2 {
+  font-size: 40px;
+  font-family: "CoreSansC-500";
+  font-weight: 500;
+  color: #212121;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 2;
+}
+.сombodia__container h2 span {
+  text-transform: uppercase;
+}
+@keyframes rotate { /*ім'я анімації*/
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.сombodia__anime {
+  position: relative;
+  z-index: 1;
+  -webkit-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+.сombodia__box:nth-child(1) {
+  position: absolute;
+  top: 0px;
+  left: 200px;
+  width: 80px;
+  height: 80px;
+  background-color: rgba(11, 130, 249, 0.7);
+  border-radius: 30%;
+  -webkit-animation-name: rotate;
+          animation-name: rotate; /* приєднали сценарій */
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.сombodia__box:nth-child(2) {
+  position: absolute;
+  top: 15px;
+  left: 215px;
+  width: 50px;
+  height: 50px;
+  background-color: #54c0ff;
+  border-radius: 30%;
+  -webkit-animation-name: rotate;
+          animation-name: rotate; /* приєднали сценарій */
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.сombodia__box:nth-child(3) {
+  position: absolute;
+  top: 0px;
+  right: 200px;
+  width: 120px;
+  height: 120px;
+  background-color: rgba(11, 130, 249, 0.7);
+  border-radius: 30%;
+  -webkit-animation-name: rotate;
+          animation-name: rotate; /* приєднали сценарій */
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.сombodia__box:nth-child(4) {
+  position: absolute;
+  top: 20px;
+  right: 220px;
+  width: 80px;
+  height: 80px;
+  background-color: #54c0ff;
+  border-radius: 30%;
+  -webkit-animation-name: rotate;
+          animation-name: rotate; /* приєднали сценарій */
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.сombodia__box:nth-child(5) {
+  position: absolute;
+  z-index: 1;
+  top: 280px;
+  right: 200px;
+  width: 420px;
+  height: 420px;
+  background-color: rgba(11, 130, 249, 0.7);
+  border-radius: 30%;
+  -webkit-animation-name: rotate;
+          animation-name: rotate; /* приєднали сценарій */
+  -webkit-animation-duration: 28s;
+          animation-duration: 28s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.сombodia__box:nth-child(6) {
+  position: absolute;
+  z-index: 1;
+  top: 340px;
+  right: 260px;
+  width: 300px;
+  height: 300px;
+  background-color: #54c0ff;
+  border-radius: 30%;
+  -webkit-animation-name: rotate;
+          animation-name: rotate; /* приєднали сценарій */
+  -webkit-animation-duration: 28s;
+          animation-duration: 28s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.сombodia__card {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 20px;
+  position: relative;
+  z-index: 5;
+}
+@keyframes transform { /* створили сценарій */
+  100% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  50% {
+    -webkit-transform: rotateZ(200deg);
+            transform: rotateZ(200deg);
+  }
+  0% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+.сombodia__item {
+  border: 1px solid rgba(2, 62, 122, 0.503);
+  background-color: #fff;
+  border-radius: 20px;
+  -webkit-box-shadow: 1px 1px 20px rgb(6, 77, 143);
+          box-shadow: 1px 1px 20px rgb(6, 77, 143);
+}
+.сombodia__item > *:last-child {
+  margin-bottom: 0;
+}
+.сombodia__item:nth-child(1) {
+  -webkit-animation-name: transform;
+          animation-name: transform; /* приєднали сценарій */
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.сombodia__item:nth-child(2) {
+  -webkit-animation-name: transform;
+          animation-name: transform; /* приєднали сценарій */
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.сombodia__item:nth-child(3) {
+  -webkit-animation-name: transform;
+          animation-name: transform; /* приєднали сценарій */
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.сombodia__item:nth-child(4) {
+  -webkit-animation-name: transform;
+          animation-name: transform; /* приєднали сценарій */
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.сombodia__img {
+  overflow: hidden;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.сombodia__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 400/300;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+.сombodia__img img:hover {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.сombodia__text {
+  padding: 20px;
+  /* 		display: flex;
+  		flex-direction: column; */
+}
+.сombodia__text > :last-child {
+  margin-bottom: 0;
+}
+.сombodia__title {
+  color: #57a9fb;
+  font-size: 25px;
+  line-height: 130%;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px #2b2a2a;
+}
+.сombodia__sub-title {
+  font-family: "Merriweather";
+  font-size: 18px;
+  color: rgb(65, 64, 64);
+  margin-bottom: 15px;
+}
+.сombodia__reviews {
+  color: rgb(65, 64, 64);
+  font-family: "Merriweather";
+  font-weight: 700;
+  margin-bottom: 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+.сombodia__reviews::after {
+  background-image: url(../hotel/stars.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  width: 10px;
+  height: 10px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 10px;
+          flex: 0 0 10px;
+  display: inline-block;
+}
+.сombodia__reviews::before {
+  content: "";
+  display: inline-block;
+  width: 65px;
+  height: 5px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 65px;
+          flex: 0 0 65px;
+  background-color: turquoise;
+}
+.сombodia__price {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  color: red;
+  font-size: 25px;
+  font-family: "CoreSansC-500";
+  font-weight: 500;
+  line-height: 130%;
+  margin-bottom: 25px;
+}
+.сombodia__price span {
+  color: rgb(65, 64, 64);
+  font-family: "CoreSansC-500";
+  font-weight: 500;
+  font-size: 20px;
+}
+.сombodia__button span {
+  background-color: #195afe;
+  color: #fff;
+  font-family: "CoreSansC-500";
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 6px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 120%;
+  border-radius: 20px;
+  font-size: 14px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 24px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: 1px solid transparent;
+}
+.сombodia__button span::before {
+  content: "";
+  display: inline-block;
+  background-image: url(../icon/стрелка.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  width: 15px;
+  height: 15px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 15px;
+          flex: 0 0 15px;
+  margin-right: 6px;
+  -webkit-transform: translateY(2px);
+      -ms-transform: translateY(2px);
+          transform: translateY(2px);
+}
+.сombodia__button span:hover {
+  cursor: pointer;
+  background-color: turquoise;
+  border: 1px solid #859af4;
+  -webkit-transform: translateY(5px);
+      -ms-transform: translateY(5px);
+          transform: translateY(5px);
+  -webkit-box-shadow: 5px 5px 20px #4f68f7;
+          box-shadow: 5px 5px 20px #4f68f7;
+}
+
+.usa {
+  padding: 160px 0 100px 0;
+  background: #54c0ff url(../img/Vector01.png);
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-position: 0 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  /*-----сценарій анімації---для декору---*/
+}
+@media (max-width: 992px) {
+  .usa {
+    padding: 80px 0 70px 0;
+  }
+}
+.usa__container h2 {
+  font-size: 40px;
+  font-family: "CoreSansC-500";
+  font-weight: 500;
+  color: #212121;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
+.usa__container h2 span {
+  text-transform: uppercase;
+}
+@keyframes rotate { /*ім'я анімації*/
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.usa__anime {
+  position: relative;
+  z-index: 1;
+  -webkit-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+.usa__box:nth-child(1) {
+  position: absolute;
+  top: 0px;
+  left: 200px;
+  width: 80px;
+  height: 80px;
+  background-color: rgba(11, 130, 249, 0.7);
+  border-radius: 30%;
+  -webkit-animation-name: rotate;
+          animation-name: rotate; /* приєднали сценарій */
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.usa__box:nth-child(2) {
+  position: absolute;
+  top: 15px;
+  left: 215px;
+  width: 50px;
+  height: 50px;
+  background-color: #54c0ff;
+  border-radius: 30%;
+  -webkit-animation-name: rotate;
+          animation-name: rotate; /* приєднали сценарій */
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.usa__box:nth-child(3) {
+  position: absolute;
+  top: 0px;
+  right: 200px;
+  width: 120px;
+  height: 120px;
+  background-color: rgba(11, 130, 249, 0.7);
+  border-radius: 30%;
+  -webkit-animation-name: rotate;
+          animation-name: rotate; /* приєднали сценарій */
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.usa__box:nth-child(4) {
+  position: absolute;
+  top: 20px;
+  right: 220px;
+  width: 80px;
+  height: 80px;
+  background-color: #54c0ff;
+  border-radius: 30%;
+  -webkit-animation-name: rotate;
+          animation-name: rotate; /* приєднали сценарій */
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.usa__box:nth-child(5) {
+  position: absolute;
+  z-index: 1;
+  top: 280px;
+  right: 200px;
+  width: 420px;
+  height: 420px;
+  background-color: rgba(11, 130, 249, 0.7);
+  border-radius: 30%;
+  -webkit-animation-name: rotate;
+          animation-name: rotate; /* приєднали сценарій */
+  -webkit-animation-duration: 28s;
+          animation-duration: 28s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.usa__box:nth-child(6) {
+  position: absolute;
+  z-index: 1;
+  top: 340px;
+  right: 260px;
+  width: 300px;
+  height: 300px;
+  background-color: #54c0ff;
+  border-radius: 30%;
+  -webkit-animation-name: rotate;
+          animation-name: rotate; /* приєднали сценарій */
+  -webkit-animation-duration: 28s;
+          animation-duration: 28s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.usa__card {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  gap: 20px;
+  position: relative;
+  z-index: 5;
+}
+@media (max-width: 645px) {
+  .usa__card {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  }
+}
+@media (max-width: 535px) {
+  .usa__card {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+@keyframes transform { /* створили сценарій */
+  100% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  50% {
+    -webkit-transform: rotateZ(200deg);
+            transform: rotateZ(200deg);
+  }
+  0% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+.usa__item {
+  border: 1px solid rgba(2, 62, 122, 0.503);
+  background-color: rgba(241, 228, 228, 0.831372549);
+  border-radius: 20px;
+  -webkit-box-shadow: 1px 1px 20px rgb(6, 77, 143);
+          box-shadow: 1px 1px 20px rgb(6, 77, 143);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+}
+.usa__item--01 {
+  border: 1px solid transparent;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.usa__item > *:last-child {
+  margin-bottom: 0;
+}
+.usa__item:nth-child(1) {
+  -webkit-animation-name: transform;
+          animation-name: transform; /* приєднали сценарій */
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.usa__item:nth-child(2) {
+  -webkit-animation-name: transform;
+          animation-name: transform; /* приєднали сценарій */
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.usa__item:nth-child(3) {
+  -webkit-animation-name: transform;
+          animation-name: transform; /* приєднали сценарій */
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.usa__item:nth-child(4) {
+  -webkit-animation-name: transform;
+          animation-name: transform; /* приєднали сценарій */
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.usa__img {
+  overflow: hidden;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.usa__img--small {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 5px;
+}
+@media (max-width: 645px) {
+  .usa__img--small {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+@media (max-width: 535px) {
+  .usa__img--small {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+.usa__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 600/300;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+.usa__img img:hover {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.usa__text {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.usa__text--01 {
+  text-align: center;
+}
+.usa__text > :last-child {
+  margin-bottom: 0;
+}
+.usa__title {
+  color: #57a9fb;
+  font-size: 25px;
+  line-height: 130%;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px #2b2a2a;
+}
+.usa__title--01 {
+  color: #fff;
+  text-shadow: 2px 2px 2px #000;
+  font-size: 30px;
+}
+@media (max-width: 535px) {
+  .usa__title {
+    font-size: 20px;
+  }
+}
+.usa__sub-title {
+  font-family: "Merriweather";
+  font-weight: 700;
+  font-size: 18px;
+  color: rgb(14, 13, 13);
+  margin-bottom: 15px;
+}
+.usa__sub-title--01 {
+  color: #fff;
+  line-height: 135%;
+  text-shadow: 2px 2px 2px #000;
+}
+@media (max-width: 535px) {
+  .usa__sub-title {
+    font-size: 16px;
+  }
+}
+.usa__reviews {
+  color: rgb(63, 33, 33);
+  text-shadow: 2px 2px 2px #ffffff;
+  line-height: 150%;
+  font-family: "Merriweather";
+  margin-bottom: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.usa__price {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  color: red;
+  font-size: 25px;
+  font-family: "CoreSansC-500";
+  font-weight: 500;
+  line-height: 130%;
+  margin-bottom: 5px;
+}
+.usa__button span {
+  background-color: #195afe;
+  color: #fff;
+  font-family: "CoreSansC-500";
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 6px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 120%;
+  border-radius: 20px;
+  font-size: 14px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: 1px solid transparent;
+}
+.usa__button span::before {
+  content: "";
+  display: inline-block;
+  background-image: url(../icon/стрелка.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  width: 15px;
+  height: 15px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 15px;
+          flex: 0 0 15px;
+  margin-right: 6px;
+  -webkit-transform: translateY(2px);
+      -ms-transform: translateY(2px);
+          transform: translateY(2px);
+}
+.usa__button span:hover {
+  cursor: pointer;
+  background-color: turquoise;
+  border: 1px solid #859af4;
+  -webkit-transform: translateY(5px);
+      -ms-transform: translateY(5px);
+          transform: translateY(5px);
+  -webkit-box-shadow: 5px 5px 20px #4f68f7;
+          box-shadow: 5px 5px 20px #4f68f7;
+}
+
+.guatemala {
+  padding: 160px 0 100px 0;
+  background: #54c0ff url(../img/Vector01.png);
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-position: 0 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  /*-----сценарій анімації---для декору---*/
+}
+@media (max-width: 992px) {
+  .guatemala {
+    padding: 80px 0 70px 0;
+  }
+}
+.guatemala__container h2 {
+  font-size: 40px;
+  font-family: "CoreSansC-500";
+  font-weight: 500;
+  color: #212121;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 2;
+}
+.guatemala__container h2 span {
+  text-transform: uppercase;
+}
+@keyframes rotate { /*ім'я анімації*/
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.guatemala__anime {
+  position: relative;
+  z-index: 1;
+  -webkit-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+.guatemala__box:nth-child(1) {
+  position: absolute;
+  top: 0px;
+  left: 200px;
+  width: 80px;
+  height: 80px;
+  background-color: rgba(11, 130, 249, 0.7);
+  border-radius: 30%;
+  -webkit-animation-name: rotate;
+          animation-name: rotate; /* приєднали сценарій */
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.guatemala__box:nth-child(2) {
+  position: absolute;
+  top: 15px;
+  left: 215px;
+  width: 50px;
+  height: 50px;
+  background-color: #54c0ff;
+  border-radius: 30%;
+  -webkit-animation-name: rotate;
+          animation-name: rotate; /* приєднали сценарій */
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.guatemala__box:nth-child(3) {
+  position: absolute;
+  top: 0px;
+  right: 200px;
+  width: 120px;
+  height: 120px;
+  background-color: rgba(11, 130, 249, 0.7);
+  border-radius: 30%;
+  -webkit-animation-name: rotate;
+          animation-name: rotate; /* приєднали сценарій */
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.guatemala__box:nth-child(4) {
+  position: absolute;
+  top: 20px;
+  right: 220px;
+  width: 80px;
+  height: 80px;
+  background-color: #54c0ff;
+  border-radius: 30%;
+  -webkit-animation-name: rotate;
+          animation-name: rotate; /* приєднали сценарій */
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.guatemala__box:nth-child(5) {
+  position: absolute;
+  z-index: 1;
+  top: 280px;
+  right: 200px;
+  width: 420px;
+  height: 420px;
+  background-color: rgba(11, 130, 249, 0.7);
+  border-radius: 30%;
+  -webkit-animation-name: rotate;
+          animation-name: rotate; /* приєднали сценарій */
+  -webkit-animation-duration: 28s;
+          animation-duration: 28s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.guatemala__box:nth-child(6) {
+  position: absolute;
+  z-index: 1;
+  top: 340px;
+  right: 260px;
+  width: 300px;
+  height: 300px;
+  background-color: #54c0ff;
+  border-radius: 30%;
+  -webkit-animation-name: rotate;
+          animation-name: rotate; /* приєднали сценарій */
+  -webkit-animation-duration: 28s;
+          animation-duration: 28s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.guatemala__card {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 20px;
+  position: relative;
+  z-index: 5;
+}
+@keyframes transform { /* створили сценарій */
+  100% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  50% {
+    -webkit-transform: rotateZ(200deg);
+            transform: rotateZ(200deg);
+  }
+  0% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+.guatemala__item {
+  border: 1px solid rgba(2, 62, 122, 0.503);
+  background-color: rgba(246, 243, 243, 0.831372549);
+  border-radius: 20px;
+  -webkit-box-shadow: 1px 1px 20px rgb(6, 77, 143);
+          box-shadow: 1px 1px 20px rgb(6, 77, 143);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+}
+.guatemala__item > *:last-child {
+  margin-bottom: 0;
+}
+.guatemala__item:nth-child(1) {
+  -webkit-animation-name: transform;
+          animation-name: transform; /* приєднали сценарій */
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.guatemala__item:nth-child(2) {
+  -webkit-animation-name: transform;
+          animation-name: transform; /* приєднали сценарій */
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.guatemala__item:nth-child(3) {
+  -webkit-animation-name: transform;
+          animation-name: transform; /* приєднали сценарій */
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.guatemala__item:nth-child(4) {
+  -webkit-animation-name: transform;
+          animation-name: transform; /* приєднали сценарій */
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.guatemala__img {
+  overflow: hidden;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.guatemala__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 400/300;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+.guatemala__img img:hover {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.guatemala__text {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.guatemala__text > :last-child {
+  margin-bottom: 0;
+}
+.guatemala__title {
+  color: #0a35e3;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 130%;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px #2b2a2a;
+}
+.guatemala__sub-title {
+  font-family: "Inter";
+  font-size: 18px;
+  color: rgb(85, 111, 245);
+  margin-bottom: 10px;
+}
+.guatemala__reviews {
+  color: rgb(65, 64, 64);
+  font-family: "Inter";
+  line-height: 130%;
+  margin-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.guatemala__reviews::after {
+  content: "";
+  display: inline-block;
+  background-image: url(../icon/trophy.png);
+  background-position: 0 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 22px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 22px;
+          flex: 0 0 22px;
+}
+.guatemala__services {
+  color: #a9a5a5;
+  line-height: 130%;
+  margin-bottom: 15px;
+  font-family: "Inter";
+}
+.guatemala__services span {
+  color: rgba(85, 112, 245, 0.792);
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.guatemala__price {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  color: red;
+  font-size: 25px;
+  font-family: "CoreSansC-500";
+  font-weight: 500;
+  line-height: 130%;
+  margin-bottom: 5px;
+}
+.guatemala__price span {
+  color: rgb(65, 64, 64);
+  font-family: "CoreSansC-500";
+  font-weight: 500;
+  font-size: 20px;
+}
+.guatemala__button span {
+  background-color: #195afe;
+  color: #fff;
+  font-family: "CoreSansC-500";
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 6px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 120%;
+  border-radius: 20px;
+  font-size: 14px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: 1px solid transparent;
+}
+.guatemala__button span::before {
+  content: "";
+  display: inline-block;
+  background-image: url(../icon/стрелка.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  width: 15px;
+  height: 15px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 15px;
+          flex: 0 0 15px;
+  margin-right: 6px;
+  -webkit-transform: translateY(2px);
+      -ms-transform: translateY(2px);
+          transform: translateY(2px);
+}
+.guatemala__button span:hover {
+  cursor: pointer;
+  background-color: turquoise;
+  border: 1px solid #859af4;
+  -webkit-transform: translateY(5px);
+      -ms-transform: translateY(5px);
+          transform: translateY(5px);
+  -webkit-box-shadow: 5px 5px 20px #4f68f7;
+          box-shadow: 5px 5px 20px #4f68f7;
+}
+
+.section1 {
+  padding: 160px 0 100px 0;
+  background: #54c0ff url(../img/Vector01.png);
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-position: 0 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  /*-----сценарій анімації---для декору---*/
+}
+@media (max-width: 992px) {
+  .section1 {
+    padding: 80px 0 70px 0;
+  }
+}
+@keyframes rotate { /*ім'я анімації*/
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.section1__anime {
+  position: relative;
+  z-index: 1;
+  -webkit-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+.section1__box:nth-child(1) {
+  position: absolute;
+  top: 0px;
+  left: 200px;
+  width: 80px;
+  height: 80px;
+  background-color: rgba(11, 130, 249, 0.7);
+  border-radius: 30%;
+  -webkit-animation-name: rotate;
+          animation-name: rotate; /* приєднали сценарій */
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.section1__box:nth-child(2) {
+  position: absolute;
+  top: 15px;
+  left: 215px;
+  width: 50px;
+  height: 50px;
+  background-color: #54c0ff;
+  border-radius: 30%;
+  -webkit-animation-name: rotate;
+          animation-name: rotate; /* приєднали сценарій */
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.section1__box:nth-child(3) {
+  position: absolute;
+  top: 0px;
+  right: 200px;
+  width: 120px;
+  height: 120px;
+  background-color: rgba(11, 130, 249, 0.7);
+  border-radius: 30%;
+  -webkit-animation-name: rotate;
+          animation-name: rotate; /* приєднали сценарій */
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.section1__box:nth-child(4) {
+  position: absolute;
+  top: 20px;
+  right: 220px;
+  width: 80px;
+  height: 80px;
+  background-color: #54c0ff;
+  border-radius: 30%;
+  -webkit-animation-name: rotate;
+          animation-name: rotate; /* приєднали сценарій */
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.section1__box:nth-child(5) {
+  position: absolute;
+  z-index: 1;
+  top: 280px;
+  right: 200px;
+  width: 420px;
+  height: 420px;
+  background-color: rgba(11, 130, 249, 0.7);
+  border-radius: 30%;
+  -webkit-animation-name: rotate;
+          animation-name: rotate; /* приєднали сценарій */
+  -webkit-animation-duration: 28s;
+          animation-duration: 28s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.section1__box:nth-child(6) {
+  position: absolute;
+  z-index: 1;
+  top: 340px;
+  right: 260px;
+  width: 300px;
+  height: 300px;
+  background-color: #54c0ff;
+  border-radius: 30%;
+  -webkit-animation-name: rotate;
+          animation-name: rotate; /* приєднали сценарій */
+  -webkit-animation-duration: 28s;
+          animation-duration: 28s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.section1__container {
+  text-align: center;
+  position: relative;
+  z-index: 5;
+}
+.section1 h2 {
+  color: #f1f3f9;
+  font-family: "Inter";
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+@media (max-width: 992px) {
+  .section1 h2 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .section1 h2 {
+    font-size: 25px;
+  }
+}
+.section1 h2 h2::before {
+  width: 12px;
+  height: 12px;
+  -webkit-box-flex: 12px;
+      -ms-flex: 12px;
+          flex: 12px;
+  background-color: #40DDB6;
+  content: "";
+  display: inline-block;
+  margin-right: 6px;
+}
+.section1 h3 {
+  color: #ebeffb;
+  font-family: "Poppins";
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 121%;
+  margin-bottom: 40px;
+}
+@media (max-width: 992px) {
+  .section1 h3 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .section1 h3 {
+    font-size: 25px;
+  }
+}
+
+.form-section1__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.form-section1__item {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding: 0 17.5px;
+  min-width: 290px;
+  margin-bottom: 28px;
+  line-height: 1.3;
+}
+.form-section1__item > *:last-child {
+  margin-bottom: 0px;
+}
+.form-section1__input {
+  padding: 21px 40px 20px;
+  border: 1px solid #DDD;
+  background-color: #F8F8F8;
+  width: 100%;
+  color: #37393F;
+  font-family: "Inter";
+  font-size: 18px;
+}
+@media (max-width: 767px) {
+  .form-section1__input {
+    font-size: 16px;
+  }
+}
+.form-section1__input:focus {
+  outline: 3px solid #069dd8;
+}
+.form-section1__input--textarea {
+  padding: 21px 40px 178px;
+  resize: vertical;
+}
+.form-section1__button {
+  padding: 21px 61px 22px 62px;
+  color: #FFF;
+  background-color: #0217d0;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  text-align: center;
+  border: 1px solid transparent;
+}
+@media (max-width: 767px) {
+  .form-section1__button {
+    font-size: 16px;
+  }
+}
+.form-section1__button:hover {
+  border: 1px solid #0217d0;
+  background-color: transparent;
+  color: #0217d0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.malta {
+  padding: 160px 0 100px 0;
+  background: #54c0ff url(../img/Vector01.png);
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-position: 0 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  /*-----сценарій анімації---для декору---*/
+}
+@media (max-width: 992px) {
+  .malta {
+    padding: 80px 0 70px 0;
+  }
+}
+.malta__container h2 {
+  font-size: 40px;
+  font-family: "CoreSansC-500";
+  font-weight: 500;
+  color: #212121;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 2;
+}
+.malta__container h2 span {
+  text-transform: uppercase;
+}
+@keyframes rotate { /*ім'я анімації*/
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.malta__anime {
+  position: relative;
+  z-index: 1;
+  -webkit-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+.malta__box:nth-child(1) {
+  position: absolute;
+  top: 0px;
+  left: 200px;
+  width: 80px;
+  height: 80px;
+  background-color: rgba(11, 130, 249, 0.7);
+  border-radius: 30%;
+  -webkit-animation-name: rotate;
+          animation-name: rotate; /* приєднали сценарій */
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.malta__box:nth-child(2) {
+  position: absolute;
+  top: 15px;
+  left: 215px;
+  width: 50px;
+  height: 50px;
+  background-color: #54c0ff;
+  border-radius: 30%;
+  -webkit-animation-name: rotate;
+          animation-name: rotate; /* приєднали сценарій */
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.malta__box:nth-child(3) {
+  position: absolute;
+  top: 0px;
+  right: 200px;
+  width: 120px;
+  height: 120px;
+  background-color: rgba(11, 130, 249, 0.7);
+  border-radius: 30%;
+  -webkit-animation-name: rotate;
+          animation-name: rotate; /* приєднали сценарій */
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.malta__box:nth-child(4) {
+  position: absolute;
+  top: 20px;
+  right: 220px;
+  width: 80px;
+  height: 80px;
+  background-color: #54c0ff;
+  border-radius: 30%;
+  -webkit-animation-name: rotate;
+          animation-name: rotate; /* приєднали сценарій */
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.malta__box:nth-child(5) {
+  position: absolute;
+  z-index: 1;
+  top: 280px;
+  right: 200px;
+  width: 420px;
+  height: 420px;
+  background-color: rgba(11, 130, 249, 0.7);
+  border-radius: 30%;
+  -webkit-animation-name: rotate;
+          animation-name: rotate; /* приєднали сценарій */
+  -webkit-animation-duration: 28s;
+          animation-duration: 28s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.malta__box:nth-child(6) {
+  position: absolute;
+  z-index: 1;
+  top: 340px;
+  right: 260px;
+  width: 300px;
+  height: 300px;
+  background-color: #54c0ff;
+  border-radius: 30%;
+  -webkit-animation-name: rotate;
+          animation-name: rotate; /* приєднали сценарій */
+  -webkit-animation-duration: 28s;
+          animation-duration: 28s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.malta__card {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 20px;
+  position: relative;
+  z-index: 5;
+}
+@keyframes transform { /* створили сценарій */
+  100% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  50% {
+    -webkit-transform: rotateZ(200deg);
+            transform: rotateZ(200deg);
+  }
+  0% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+.malta__item {
+  border: 1px solid rgba(2, 62, 122, 0.503);
+  background-color: #fff;
+  border-radius: 20px;
+  -webkit-box-shadow: 1px 1px 20px rgb(6, 77, 143);
+          box-shadow: 1px 1px 20px rgb(6, 77, 143);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+}
+.malta__item > *:last-child {
+  margin-bottom: 0;
+}
+.malta__item:nth-child(1) {
+  -webkit-animation-name: transform;
+          animation-name: transform; /* приєднали сценарій */
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.malta__item:nth-child(2) {
+  -webkit-animation-name: transform;
+          animation-name: transform; /* приєднали сценарій */
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.malta__item:nth-child(3) {
+  -webkit-animation-name: transform;
+          animation-name: transform; /* приєднали сценарій */
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.malta__item:nth-child(4) {
+  -webkit-animation-name: transform;
+          animation-name: transform; /* приєднали сценарій */
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s; /*тривалість анімації*/
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1; /*бескінечне повторення, або числове значення*/
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; /*кожне парне повторення*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear; /*плавність*/
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; /*затримка анімації*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*у кінцевому положенні*/
+}
+.malta__img {
+  overflow: hidden;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.malta__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 400/300;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+.malta__img img:hover {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.malta__text {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.malta__text > :last-child {
+  margin-bottom: 0;
+}
+.malta__title {
+  color: #57a9fb;
+  font-size: 25px;
+  line-height: 130%;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px #2b2a2a;
+}
+.malta__title span {
+  color: #2b2a2a;
+  font-weight: 600;
+  text-shadow: none;
+}
+.malta__sub-title {
+  font-family: "Merriweather";
+  font-size: 18px;
+  line-height: 130%;
+  color: rgb(65, 64, 64);
+  margin-bottom: 5px;
+}
+.malta__time {
+  font-family: "Merriweather";
+  font-size: 15px;
+  line-height: 130%;
+  color: rgb(65, 64, 64);
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+.malta__reviews {
+  color: rgb(65, 64, 64);
+  font-family: "Merriweather";
+  font-weight: 700;
+  margin-bottom: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+.malta__reviews::after {
+  background-image: url(../hotel/stars.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  width: 10px;
+  height: 10px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 10px;
+          flex: 0 0 10px;
+  display: inline-block;
+}
+.malta__reviews::before {
+  content: "";
+  display: inline-block;
+  width: 65px;
+  height: 5px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 65px;
+          flex: 0 0 65px;
+  background-color: turquoise;
+}
+.malta__price {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  color: red;
+  font-size: 25px;
+  font-family: "CoreSansC-500";
+  font-weight: 500;
+  line-height: 130%;
+  margin-bottom: 5px;
+}
+.malta__price span {
+  color: rgb(65, 64, 64);
+  font-family: "CoreSansC-500";
+  font-weight: 500;
+  font-size: 20px;
+}
+.malta__bron {
+  color: rgb(133, 2, 2);
+  font-size: 15px;
+  font-family: "CoreSansC-500";
+  font-weight: 500;
+  line-height: 120%;
+}
+.malta__button span {
+  background-color: #195afe;
+  color: #fff;
+  font-family: "CoreSansC-500";
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 6px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 120%;
+  border-radius: 20px;
+  font-size: 14px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 24px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: 1px solid transparent;
+}
+.malta__button span::before {
+  content: "";
+  display: inline-block;
+  background-image: url(../icon/стрелка.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  width: 15px;
+  height: 15px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 15px;
+          flex: 0 0 15px;
+  margin-right: 6px;
+  -webkit-transform: translateY(2px);
+      -ms-transform: translateY(2px);
+          transform: translateY(2px);
+}
+.malta__button span:hover {
   cursor: pointer;
   background-color: turquoise;
   border: 1px solid #859af4;

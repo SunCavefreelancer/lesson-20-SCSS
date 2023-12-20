@@ -1,0 +1,423 @@
+///* --------------------------------viphotel----------page----------------------------- */
+
+.disney {
+	padding: 160px 0 100px 0;
+	@media (max-width:992px){
+		padding: 80px 0 70px 0;
+	}
+	background: #54c0ff url(../img/Vector01.png);			//2 зображеня
+	content: '';
+	width: 100%;
+	height: 100%;
+	background-position: 0 50px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	&__container {
+		h2 {
+			font-size: 40px;
+			line-height: 125%;
+			font-family: 'CoreSansC-500';
+			font-weight: 500;
+			color: #212121;
+			margin-bottom: 5px;
+			position: relative;
+			@media (max-width:992px){
+				font-size: 30px;
+				margin-bottom: 30px;
+			}
+			@media (max-width:767px){
+				font-size: 25px;
+				margin-bottom: 20px;
+			}
+			z-index: 2;
+			& span {
+				text-transform: uppercase;
+			}
+		}
+		& h3 {
+			font-size: 20px;
+			color: #fff;
+			line-height: 130%;
+			margin-bottom: 25px;
+		}
+	}
+
+
+
+	
+//-------------------анімація 1----------------
+/*-----сценарій анімації---для декору---*/
+@keyframes rotate { /*ім'я анімації*/
+	0% {
+	transform: rotate(0deg);
+}
+  100% {
+	transform: rotate(360deg);
+}
+}
+//-----------------disney--------------------
+
+	&__anime {
+		position: relative; // для анімації
+		z-index: 1;
+		// Створення черговості анімації
+		transition-duration: 0.7s; // плавность
+		transition-delay: 0.2s; // затримка появи переходу
+	} 
+	&__box:nth-child(1) {
+		position: absolute;
+		top: 0px;
+		left: 200px;
+		width: 80px;
+		height: 80px;
+		background-color: rgb(11, 130, 249, 0.7);
+		border-radius: 30%;
+//приєднали сценарій
+		animation-name: rotate; /* приєднали сценарій */
+		animation-duration: 20s;                    /*тривалість анімації*/
+		animation-iteration-count: infinite /*2*/; /*бескінечне повторення, або числове значення*/
+		animation-direction: alternate;            /*кожне парне повторення*/
+		animation-timing-function: linear;         /*плавність*/
+		animation-delay: 0.2s;                     /*затримка анімації*/
+		animation-fill-mode: forwards;             /*у кінцевому положенні*/
+	}
+	&__box:nth-child(2) {
+		position: absolute;
+		top: 15px;
+		left: 215px;
+		width: 50px;
+		height: 50px;
+		background-color: #54c0ff;
+		border-radius: 30%;
+//приєднали сценарій
+		animation-name: rotate; /* приєднали сценарій */
+		animation-duration: 20s;                    /*тривалість анімації*/
+		animation-iteration-count: infinite /*2*/; /*бескінечне повторення, або числове значення*/
+		animation-direction: alternate;            /*кожне парне повторення*/
+		animation-timing-function: linear;         /*плавність*/
+		animation-delay: 0.2s;                     /*затримка анімації*/
+		animation-fill-mode: forwards;             /*у кінцевому положенні*/
+	}
+	&__box:nth-child(3) {
+		position: absolute;
+		top: 0px;
+		right: 200px;
+		width: 120px;
+		height: 120px;
+		background-color: rgb(11, 130, 249, 0.7);
+		border-radius: 30%;
+//приєднали сценарій
+		animation-name: rotate; /* приєднали сценарій */
+		animation-duration: 20s;                    /*тривалість анімації*/
+		animation-iteration-count: infinite /*2*/; /*бескінечне повторення, або числове значення*/
+		animation-direction: alternate;            /*кожне парне повторення*/
+		animation-timing-function: linear;         /*плавність*/
+		animation-delay: 0.3s;                     /*затримка анімації*/
+		animation-fill-mode: forwards;             /*у кінцевому положенні*/
+	}
+	&__box:nth-child(4) {
+		position: absolute;
+		top: 20px;
+		right: 220px;
+		width: 80px;
+		height: 80px;
+		background-color: #54c0ff;
+		border-radius: 30%;
+//приєднали сценарій
+		animation-name: rotate; /* приєднали сценарій */
+		animation-duration: 20s;                    /*тривалість анімації*/
+		animation-iteration-count: infinite /*2*/; /*бескінечне повторення, або числове значення*/
+		animation-direction: alternate;            /*кожне парне повторення*/
+		animation-timing-function: linear;         /*плавність*/
+		animation-delay: 0.3s;                     /*затримка анімації*/
+		animation-fill-mode: forwards;             /*у кінцевому положенні*/
+	}
+	&__box:nth-child(5) {
+		position: absolute;
+		z-index: 1;
+		top: 280px;
+		right: 200px;
+		width: 420px;
+		height: 420px;
+		background-color: rgb(11, 130, 249, 0.7);
+		border-radius: 30%;
+//приєднали сценарій
+		animation-name: rotate; /* приєднали сценарій */
+		animation-duration: 28s;                    /*тривалість анімації*/
+		animation-iteration-count: infinite /*2*/; /*бескінечне повторення, або числове значення*/
+		animation-direction: alternate;            /*кожне парне повторення*/
+		animation-timing-function: linear;         /*плавність*/
+		animation-delay: 0.1s;                     /*затримка анімації*/
+		animation-fill-mode: forwards;             /*у кінцевому положенні*/
+	}
+	&__box:nth-child(6) {
+		position: absolute;
+		z-index: 1;
+		top: 340px;
+		right: 260px;
+		width: 300px;
+		height: 300px;
+		background-color: #54c0ff;
+		border-radius: 30%;
+//приєднали сценарій
+		animation-name: rotate; /* приєднали сценарій */
+		animation-duration: 28s;                    /*тривалість анімації*/
+		animation-iteration-count: infinite /*2*/; /*бескінечне повторення, або числове значення*/
+		animation-direction: alternate;            /*кожне парне повторення*/
+		animation-timing-function: linear;         /*плавність*/
+		animation-delay: 0.1s;                     /*затримка анімації*/
+		animation-fill-mode: forwards;             /*у кінцевому положенні*/
+	}
+	
+	// .disney__card
+	&__card {				//CARDS
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));		//тут робимо за допомогою грід
+		gap: 20px;
+		position: relative;				//ставимо картки наверх декору кругів
+		z-index: 5;						//ставимо картки наверх декору кругів
+	}
+	
+
+//----------сценарій---анімації для карток ------------
+// анімація 2  ---для карток-----
+@keyframes transform { /* створили сценарій */
+	100% {
+		transform: rotateZ(0deg);
+	}
+	50% {
+		transform: rotateZ(200deg);
+	}
+	0% {
+		transform: rotateZ(360deg);
+	}
+}
+	// .viphotel__item 		//CARD
+	&__item {
+		border: 1px solid rgba(2, 62, 122, 0.503);
+		background-color: #fff;
+		border-radius: 20px;
+		box-shadow: 1px 1px 20px rgb(6, 77, 143);
+
+		//ПРИБИВАЕМ КНОПКУ КНИЗУ КАРТЫ
+		display: flex;
+		flex-direction: column;
+		min-height: 100%;
+		//ПРИБИВАЕМ КНОПКУ КНИЗУ КАРТЫ
+		&>*:last-child {
+			margin-bottom: 0;
+		}
+		// анімація для КАРТКИ 1
+		&:nth-child(1) {
+		//----------------анімація для карток ------------
+		//приєднали сценарій
+		animation-name: transform; /* приєднали сценарій */
+		animation-duration: 1.2s;                    /*тривалість анімації*/
+		animation-iteration-count: 1 /*infinite*/; /*бескінечне повторення, або числове значення*/
+		animation-direction: alternate;            /*кожне парне повторення*/
+		animation-timing-function: linear;         /*плавність*/
+		animation-delay: 0.0s;                     /*затримка анімації*/
+		animation-fill-mode: forwards;             /*у кінцевому положенні*/
+		}
+				// анімація для КАРТКИ 2
+				&:nth-child(2) {
+					//----------------анімація для карток ------------
+					//приєднали сценарій
+					animation-name: transform; /* приєднали сценарій */
+					animation-duration: 1.2s;                    /*тривалість анімації*/
+					animation-iteration-count: 1 /*infinite*/; /*бескінечне повторення, або числове значення*/
+					animation-direction: alternate;            /*кожне парне повторення*/
+					animation-timing-function: linear;         /*плавність*/
+					animation-delay: 0.1s;                     /*затримка анімації*/
+					animation-fill-mode: forwards;             /*у кінцевому положенні*/
+					}
+							// анімація для КАРТКИ 1
+		&:nth-child(3) {
+			//----------------анімація для карток ------------
+			//приєднали сценарій
+			animation-name: transform; /* приєднали сценарій */
+			animation-duration: 1.2s;                    /*тривалість анімації*/
+			animation-iteration-count: 1 /*infinite*/; /*бескінечне повторення, або числове значення*/
+			animation-direction: alternate;            /*кожне парне повторення*/
+			animation-timing-function: linear;         /*плавність*/
+			animation-delay: 0.2s;                     /*затримка анімації*/
+			animation-fill-mode: forwards;             /*у кінцевому положенні*/
+			}
+					// анімація для КАРТКИ 1
+		&:nth-child(4) {
+			//----------------анімація для карток ------------
+			//приєднали сценарій
+			animation-name: transform; /* приєднали сценарій */
+			animation-duration: 1.2s;                    /*тривалість анімації*/
+			animation-iteration-count: 1 /*infinite*/; /*бескінечне повторення, або числове значення*/
+			animation-direction: alternate;            /*кожне парне повторення*/
+			animation-timing-function: linear;         /*плавність*/
+			animation-delay: 0.3s;                     /*затримка анімації*/
+			animation-fill-mode: forwards;             /*у кінцевому положенні*/
+			}
+	}
+
+	// .disney__img
+	&__img {
+		overflow: hidden;				//--класний ефект збільшення фото
+		border-top-left-radius: 20px;	//саме тут треба писати такий border
+		border-top-right-radius:20px;	//саме тут треба писати такий border
+	}
+
+	&__img img{						//робимо за допомогою FLEX
+		width: 100%;				//робимо за допомогою FLEX
+		height: 100%;
+		object-fit: cover;			//--робимо за допомогою FLEX
+		aspect-ratio: 400 / 300;	//--робимо за допомогою FLEX /* значення по макету */
+		transition: all 0.8s ease;
+		&:hover {
+			transform: scale(1.2);			//--класний ефект збільшення фото
+			border-top-left-radius: 20px;	//саме тут треба писати такий border
+			border-top-right-radius:20px;	//саме тут треба писати такий border
+		}
+	}
+
+
+	//.disney__text 			//---ОБОЛОЧКА ТЕКСТА
+	&__text {
+		padding: 20px;
+		//ПРИБИВАЕМ КНОПКУ КНИЗУ КАРТЫ
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		//ПРИБИВАЕМ КНОПКУ КНИЗУ КАРТЫ
+		&>:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	// .disney__title
+	&__title {
+		color: #57a9fb;
+		font-size: 25px;
+		line-height: 130%;
+		margin-bottom: 10px;
+		text-shadow: 1px 1px 2px #2b2a2a;
+	}
+
+	// .disney__sub-title
+	&__sub-title {
+		font-family: 'Merriweather';
+		font-size: 18px;
+		color: rgb(65, 64, 64);
+		margin-bottom: 15px;
+	}
+
+	// .disney__reviews
+	&__reviews {
+		color: rgb(65, 64, 64);
+		font-family: 'Merriweather';
+		font-weight: 700;
+		margin-bottom: 10px;
+
+		align-items: center;			//вирівнюємо полоску відносно тексту
+
+		display: flex;
+		gap: 8px;
+		&::after {
+			background-image: url(../hotel/stars.png);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			content: '';
+			width: 10px;
+			height: 10px;
+			flex: 0 0 10px;
+			display: inline-block;
+		}
+		&::before {
+			content: '';
+			display: inline-block;
+			width: 65px;
+			height: 5px;
+			flex: 0 0 65px;
+			background-color: turquoise;
+		}
+	}
+
+	//__magic
+	&__magic {
+		line-height: 130%;
+		color: #195afe;
+		margin-bottom: 10px;
+	}
+
+	// .disney__price
+	&__price {
+		//ПРИБИВАЕМ КНОПКУ КНИЗУ КАРТЫ
+		flex-grow: 1;
+		color: red;
+		font-size: 25px;
+		font-family: 'CoreSansC-500';
+		font-weight: 500;
+		line-height: 130%;
+		margin-bottom: 15px;
+		& span {
+			color: rgb(65, 64, 64);
+			font-family: 'CoreSansC-500';
+			font-weight: 500;
+			font-size: 20px;
+		}
+	}
+
+
+	//__time
+	&__time {
+		color: #000;
+		font-size: 16px;
+		font-weight: 600;
+		& span {
+			color: red;
+		}
+	}
+
+	// .vdisney__button
+	&__button {
+		& span {
+			background-color: #195afe;
+			color: #fff;
+			font-family: 'CoreSansC-500';
+			font-weight: 500;
+
+			display: flex;
+			gap: 6px;
+
+			justify-content: center;			//текст по центру
+			
+			line-height: 120%;
+			border-radius: 20px;
+			font-size: 14px;
+			padding: 10px 20px;
+			margin-top: 20px;
+			margin-bottom: 10px;
+			transition: 0.5s;
+			border: 1px solid transparent;
+			&::before {
+				content: "";
+				display: inline-block;
+				background-image: url(../icon/стрелка.png);
+				background-repeat: no-repeat;
+				background-position: 0 0;
+				background-size: contain;
+				width: 15px;
+				height: 15px;
+				flex: 0 0 15px;
+				margin-right: 6px;
+				transform: translateY(2px);
+			}	
+			&:hover {
+				cursor: pointer;
+				background-color: turquoise;
+				border: 1px solid #859af4;
+				transform: translateY(5px);
+				box-shadow: 5px 5px 20px #4f68f7;
+			}
+			
+		}
+}
+}

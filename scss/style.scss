@@ -3,8 +3,6 @@
 // Скидання стилів
 @import "_reset.scss";
 // Компоненти, сторінки
-@import "_common.scss";
-// Компоненти, сторінки
 @import "header.css";
 // Компоненти, сторінки
 @import "_footer.scss";
@@ -28,7 +26,8 @@
 @import "_Helicopter.scss";
 // Компоненти, сторінки
 @import "_Atlantica.scss";
-
+// Компоненти, сторінки
+@import "_Linear.scss";
 
 
 
@@ -1278,7 +1277,7 @@ body {
 		}
 }
 
-//блок з іконками, що зникають
+		//блок з іконками, що зникають
 		&__item {		 //.operator__item
 			display: flex;			//для иконок соц.сетей
 			justify-content: space-between;
@@ -1327,7 +1326,7 @@ body {
 			}
 		}
 	}
-//блок з іконками, що зникають
+		//блок з іконками, що зникають
 
 
 	// .operator__img

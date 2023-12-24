@@ -1,0 +1,368 @@
+//-----------------------------------------------Linear-------------page---------------------
+
+//------annime on page-----------
+	&__anime {
+		@media (max-width:767px){
+			&__box:nth-child(5) {
+				display: none;
+			}
+			&__box:nth-child(6) {
+				display: none;
+			}
+		}
+	}
+//------annime on page-----------
+
+
+.linear {
+	position: relative;
+	aspect-ratio: 1920 / 350;
+
+	padding: 100px 0 50px 0;
+	@media (max-width:992px){
+		padding: 0px 0 30px 0;
+	}
+
+	// .linear__baner
+	&__baner {
+		position: absolute;
+		content: "";
+		background-image: url(../hotel/linear.webp);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+		&__text {
+			padding: 150px 20px;
+			position: relative;		//вытащили текст наверх
+			z-index: 2;	
+			line-height: 130%;			//вытащили текст наверх
+			font-size: 50px;
+			font-family: 'CoreSansC-500';
+			color: #fffafa;
+			text-align: center;
+			text-shadow: 0px 0px 7px black;
+			@media (max-width:767px){
+				font-size: 35px;
+			}
+		}
+	
+}
+
+
+//--------------------------------------------
+.around {
+	padding: 50px 0 50px 0;
+	position: relative;
+	z-index: 2;
+
+	// .around__container
+	&__container {
+			& h2 {
+				font-size: 30px;
+				color: #b41919;
+				font-weight: 500;
+				margin-bottom: 20px;
+			}
+	}
+
+	// .around__cards
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 15px;
+		@media (max-width:992px){
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width:550px){
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	// .around__card
+	&__card {
+		border-radius:  8px 8px 0 0;
+		background-color: #e4e4e4;
+		overflow: hidden;
+		box-shadow: 1px 1px 20px rgb(6, 77, 143);
+
+		//ПРИБИВАЕМ КНОПКУ КНИЗУ КАРТЫ
+		display: flex;
+		flex-direction: column;
+		min-height: 100%;
+		//ПРИБИВАЕМ КНОПКУ КНИЗУ КАРТЫ
+		&>*:last-child {
+			margin-bottom: 0;
+		}
+
+		position: relative;
+		overflow: hidden;
+		&::before {					// створили плашку при наведені на картку
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-color: #979df932;
+			transform: translate(0px, 0px);   // так тоже класно виходить 
+			//transform: translate(-100%, 0px); 
+			transition: 0.5s;
+			opacity: 0.5;
+			z-index: 1;
+			
+		}
+		&:hover::before {
+			transform: translate(-100%, 0px); // так тоже класно виходить 
+			//transform: translate(0px, 0px); 
+		}
+		}
+
+	// .around__img
+	&__img {
+		overflow: hidden;				//--класний ефект збільшення фото		
+		border-radius:  8px 8px 0 0;
+	}
+	&__img img {
+		aspect-ratio: 400 / 200px;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+
+		transition: 0.5s;
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+
+	// .around__text 	//---ОБОЛОЧКА ТЕКСТА
+	&__text {
+		padding: 15px;
+		font-family: 'CoreSansC-500';
+				//ПРИБИВАЕМ КНОПКУ КНИЗУ КАРТЫ
+				display: flex;
+				flex-direction: column;
+				flex-grow: 1;
+				//ПРИБИВАЕМ КНОПКУ КНИЗУ КАРТЫ
+		&>*:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	// .around__title
+	&__title {
+		font-size: 18px;
+		color: #145efd;
+		line-height: 127%;
+		margin-bottom: 10px;
+						//ПРИБИВАЕМ КНОПКУ КНИЗУ КАРТЫ
+						flex-grow: 1;
+		@media (max-width:992px){
+			font-size: 16px;
+			margin-bottom: 5px;
+		}
+	}
+
+	// .around__icon
+	&__icon {
+		padding: 10px 0;
+		font-size: 14px;
+		color: #302f30;
+		margin-bottom: 15px;
+
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 8px;
+		@media (max-width:992px){
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width:767px){
+			grid-template-columns: repeat(1, 1fr);
+			margin-bottom: 10px;
+		}
+	}
+		&__item:nth-child(1)::before {
+			content: "";
+			display: inline-block;
+			background-image: url(../icon/icon01.webp);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: 15px;
+			height: 15px;
+			flex: 0 0 15px;
+			margin-right: 6px;
+			transform: translateY(3px);
+	}
+	&__item:nth-child(2)::before {
+		content: "";
+		display: inline-block;
+		background-image: url(../icon/icon02.webp);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		width: 15px;
+		height: 15px;
+		flex: 0 0 15px;
+		margin-right: 6px;
+		transform: translateY(2px);
+}
+&__item:nth-child(3)::before {
+	content: "";
+	display: inline-block;
+	background-image: url(../icon/icon03.webp);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 15px;
+	height: 15px;
+	flex: 0 0 15px;
+	margin-right: 6px;
+	transform: translateY(3px);
+}
+
+&__item:nth-child(4)::before {
+	content: "";
+	display: inline-block;
+	background-image: url(../icon/icon04.webp);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 15px;
+	height: 15px;
+	flex: 0 0 15px;
+	margin-right: 6px;
+	transform: translateY(3px);
+}
+
+		// .around__button
+		&__button {
+			& span {
+				background-color: #195afe;
+				color: #fff;
+				font-family: 'CoreSansC-500';
+				font-weight: 500;
+	
+				display: flex;
+				gap: 12px;
+	
+				justify-content: center;			//текст по центру
+				
+				line-height: 120%;
+				border-radius: 20px;
+				font-size: 14px;
+				padding: 10px 20px;
+				margin-bottom: 15px;
+				transition: 0.5s;
+				border: 1px solid transparent;
+				position: relative;
+				z-index: 3;
+				@media (max-width:767px){
+					padding: 8px 15px;
+					text-align: left;
+				}
+				&::before {
+					content: "";
+					display: block;
+					background-image: url(../icon/стрелка.png);
+					background-repeat: no-repeat;
+					background-position: 0 0;
+					background-size: contain;
+					width: 15px;
+					height: 15px;
+					flex: 0 0 15px;
+					transform: translateY(2px);
+				}	
+				&:hover {
+					cursor: pointer;
+					background-color: turquoise;
+					border: 1px solid #859af4;
+					transform: translateY(5px);
+					box-shadow: 5px 5px 20px #4f68f7;
+				}
+				
+			}
+	}
+
+
+	// .around__item
+	&__included {
+		font-size: 16px;
+		color: #af1c0f;
+		margin-bottom: 10px;
+		line-height: 127%;
+		@media (max-width:992px){
+			font-size: 14px;			
+		}
+	}
+
+}
+
+
+
+
+
+
+//--------------------------------section ---prize-----------
+.prize {
+	&>*:last-child {
+		margin-bottom: 0;
+	}
+	
+	// .prize__cards
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 15px;
+		@media (max-width:992px){
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width:550px){
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	// .prize__card
+
+	&__card {
+		font-family: 'CoreSansC-500';
+		font-weight: 500;
+	}
+
+	// .prize__list
+
+	&__list {
+		margin-bottom: 20px;
+	}
+
+	// .prize__link
+
+	&__link {
+		padding: 3px;
+		font-family: 'Inter';
+		font-size: 16px;
+		color: #fff;
+		line-height: 140%;
+		transition: 0.5s;
+			&:hover {
+				background-color: #ffffff35;
+			}
+		display: flex;
+		gap: 12px;
+		
+		&::before {
+			content: "";
+			background-color: #af1c0f;
+			width: 6px;
+			height: 6px;
+			flex: 0 0 6px;
+			transform: translateY(9px);
+
+		}
+	}
+}

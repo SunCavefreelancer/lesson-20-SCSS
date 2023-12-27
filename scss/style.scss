@@ -28,7 +28,8 @@
 @import "_Atlantica.scss";
 // Компоненти, сторінки
 @import "_Linear.scss";
-
+// Функції
+@import "_function.scss";
 
 
 
@@ -295,8 +296,6 @@ body {
 		background-size: cover;				// ставимо фон для картки
 		width: 100%;						// ставимо фон для картки
 		height: 100%;						// ставимо фон для картки
-
-		//aspect-ratio: 400 / 211;			// розмір фото по макету ШИРИНА та ВИСОТА
 
 		position: relative;		//позіціонуємо плашку при наведені на картку
 		overflow: hidden;
@@ -619,260 +618,148 @@ body {
 
 
 //-------------------------------------------------------------------------
-.travel {				//відкрили блок
-	padding: 80px 0;
-	@media (max-width:767px){
-		padding: 30px 0;		
+.travell {
+	padding: 60px 0 50px 0;
+	@media (max-width:1200px){
+		padding: 20px 0 30px 0;
 	}
-	@media (max-width:540px){
-		padding: 20px 0;		
-	}
-
-	// .travel__container
-	h3 {
-		font-size: 30px;
-		text-align: center;
-		font-family: 'CoreSansC-95Blac';
-		font-weight: 900;
-		line-height: 130%;
+	& h3 {
+		font-size: 35px;
 		color: #fff;
-		margin-bottom: 50px;
-		@media (max-width:540px){
-			font-size: 25px;
-		}
+		font-weight: 500;
+		padding: 0 25px;
+		text-align: center;
+		font-family: 'CoreSansC-500';
+		font-weight: 500;
+		line-height: 130%;
+		margin-bottom: 40px;
+		@media (max-width:992px){
+			padding: 40px 0 30px 0;
+			font-size: 30px;
+			margin-bottom: 20px;
 	}
+	@media (max-width:767px){
+		padding: 20px 0 30px 0;
+		font-size: 25px;
+}
+}
 
-	// .travel__galery
-	&__galery {
+	// .travell__cards
+	&__cards {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);					//ШИРИНА ФОТО
-		gap: 10px;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 5px;
+			@media (max-width:1200px){
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@media (max-width:992px){
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width:767px){
+			grid-template-columns: repeat(1, 1fr);
+		}
 	}
 
-
-	// .travel__text // обгорткa тексту !!!
-	&__text {
-		display: grid;				//для обгортки тексту !!!
-	}
-	// .travel__item --------------
-	&__title {
-		font-size: 30px;
-		font-family: 'CoreSansC-95Blac';
-		font-weight: 900;
-		color: #ffffff;
-		line-height: 125%;
-		text-shadow: 5px 2px 20px #000;
+	// .travell__item
+	&__item {
 		position: relative;
-		z-index: 2;
-			
-			max-width: 360px; /* 320px + 20px+20px;		задаємо для тексту розмір*/
-			padding: 30px 20px 30px 20px;		
-			@media (max-width:992px){
-				font-size: 18px;
-				max-width: 450px; /* 380px + 20px+20px;		задаємо для тексту розмір*/
-			}
-		}
+		aspect-ratio: 800 / 500;
 
-		//.__sub-title  --------------
-		&__sub-title {
-			font-size: 20px;
-			font-family: 'CoreSansC-500';
-			font-weight: 500;
-			color: #ffffff;
-			line-height: 125%;
-			text-shadow: 5px 2px 20px #000;
-			position: relative;
-			z-index: 2;
-
-			max-width: 360px; /* 320px + 20px+20px;		задаємо для тексту розмір*/
-			padding: 25px 20px 25px 20px;
-			
-			@media (max-width:767px){
-				font-size: 16px;
-				max-width: 480px; /* 440px + 20px+20px;		задаємо для тексту розмір*/
-			}
-		}
-
-
-	// .travel__item -------обгортка фото-------
-	&__item{
-		position: relative;
-		//padding-bottom: 55.208333%; /* 530/960 */
-		aspect-ratio: 480/300;						//ВИСОТА ФОТО
-
-		display: grid;								//текст вниз-вниз
-		align-items: end;							//текст вниз-вниз
-		justify-content: center;						//текст вниз-вниз
-		text-align: center;	
-
-		transition: 0.5s;			
-		&:hover {
-				opacity: 0.7;
-			}
-					@media (max-width:767px){		//вертаємо як було по 4 фото в рядок
-					grid-template-columns: repeat(2, 1fr);
-					grid-column: span 2;
-				}
-			}
-		// .travel__item ------саме фото------
-		&__item img{
-			position: absolute;	
-			top: 0;
-			left: 0;	
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		}
-
-
-
-		&__item:nth-child(1){
+		min-height: 100%;
+		
+		display: grid;		//для тексту
+	
+	&__item:nth-child(1) {
+		grid-column-start: 1;
+		grid-column-end: 3;
+		grid-row-start: 1;
+		grid-row-end: 3;
+		@media (max-width:1200px){
 			grid-column-start: 1;
-			grid-column-end: 3;
+			grid-column-end: 2;
 			grid-row-start: 1;
-			grid-row-end: 3;
-			@media (max-width:767px){		//робимо по 2 фото в рядок
-				grid-column-start: 1;
-				grid-column-end: 3;
-				grid-row-start:1;
-				grid-row-end: 2;
-			}
+			grid-row-end: 2;
 		}
-		&__item:nth-child(10){
+		}
+		&__item:nth-child(12) {
 			grid-column-start: 3;
 			grid-column-end: 5;
 			grid-row-start: 3;
 			grid-row-end: 5;
-			@media (max-width:767px){		//вертаємо як було по 4 фото в рядок
-				grid-column-start: 1;
-				grid-column-end: 3;
-				grid-row-start:2;
-				grid-row-end: 3;
-			}
-		}
-		&__item:nth-child(11){
-			grid-column-start: 1;
-			grid-column-end: 3;
-			grid-row-start: 5;
-			grid-row-end: 6;
-			@media (max-width:767px){		//вертаємо як було по 4 фото в рядок
-				grid-column-start: 1;
-				grid-column-end: 3;
-				grid-row-start:3;
+			@media (max-width:1200px){
+				grid-column-start: 3;
+				grid-column-end: 4;
+				grid-row-start: 3;
 				grid-row-end: 4;
 			}
-		}
-		&__item:nth-child(12){
-			grid-column-start: 3;
-			grid-column-end: 5;
-			grid-row-start: 5;
-			grid-row-end: 6;
-			@media (max-width:767px){		//вертаємо як було по 4 фото в рядок
-				grid-column-start: 1;
-				grid-column-end: 3;
-				grid-row-start:5;
-				grid-row-end: 4;
 			}
-		}
+}
+	// .travell__img
+/* 	&__img {
 
-		//------540рх------
-		&__item:nth-child(1){
-			@media (max-width:540px){		//робимо по 2 фото в рядок
-					grid-column-start: 1;
-					grid-column-end: 5;
-					grid-row-start:1;
-					grid-row-end: 2;
-			}
+	} */
+
+	&__img img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	// .travell__text
+	&__text {
+		position: relative;
+		z-index: 2;
+
+		padding: 25px;
+		color: #fff;
+		text-align: center;
+
+		align-items: end;		//для тексту
+		align-self: end;		//для тексту
+		&>*:last-child {
+			margin-bottom: 0;
 		}
-		&__item:nth-child(2){
-			@media (max-width:540px){		//робимо по 2 фото в рядок
-				grid-column-start: 1;
-				grid-column-end: 5;
-				grid-row-start:2;
-				grid-row-end: 3;
+	}
+
+	// .travell__title
+	&__title {
+			font-size: 30px;
+			margin-bottom: 15px;
+			font-family: 'CoreSansC-500';
+			font-weight: 500;
+			line-height: 130%;
+			@media (max-width:992px){
+				font-size: 30px;
 			}
-		}
-		&__item:nth-child(3){
-			@media (max-width:540px){		//робимо по 2 фото в рядок
-				grid-column-start: 1;
-				grid-column-end: 5;
-				grid-row-start:3;
-				grid-row-end: 4;
+			@media (max-width:767px){
+				font-size: 25px;
+				line-height: 125%;
 			}
-		}
-		&__item:nth-child(4){
-			@media (max-width:540px){		//робимо по 2 фото в рядок
-				grid-column-start: 1;
-				grid-column-end: 5;
-				grid-row-start:4;
-				grid-row-end: 5;
+			@media (max-width:540px){
+				font-size: 20px;
 			}
+	}
+
+	// .travell__sub-title
+	&__sub-title {	
+		font-size: 20px;
+		margin-bottom: 10px;
+		font-family: 'CoreSansC-500';
+		line-height: 130%;
+		@media (max-width:1300px){
+			font-size: 18px;
 		}
-		&__item:nth-child(5){
-			@media (max-width:540px){		//робимо по 2 фото в рядок
-				grid-column-start: 1;
-				grid-column-end: 5;
-				grid-row-start:5;
-				grid-row-end: 6;
-			}
+		@media (max-width:767px){
+			font-size: 16px;
 		}
-		&__item:nth-child(6){
-			@media (max-width:540px){		//робимо по 2 фото в рядок
-				grid-column-start: 1;
-				grid-column-end: 5;
-				grid-row-start:6;
-				grid-row-end: 7;
-			}
-		}
-		&__item:nth-child(7){
-			@media (max-width:540px){		//робимо по 2 фото в рядок
-				grid-column-start: 1;
-				grid-column-end: 5;
-				grid-row-start:7;
-				grid-row-end: 8;
-			}
-		}
-		&__item:nth-child(8){
-			@media (max-width:540px){		//робимо по 2 фото в рядок
-				grid-column-start: 1;
-				grid-column-end: 5;
-				grid-row-start:8;
-				grid-row-end: 9;
-			}
-		}
-		&__item:nth-child(9){
-			@media (max-width:540px){		//робимо по 2 фото в рядок
-				grid-column-start: 1;
-				grid-column-end: 5;
-				grid-row-start:9;
-				grid-row-end: 10;
-			}
-		}
-		&__item:nth-child(10){
-			@media (max-width:540px){		//робимо по 2 фото в рядок
-					grid-column-start: 1;
-					grid-column-end: 5;
-					grid-row-start:10;
-					grid-row-end: 11;
-			}
-		}
-		&__item:nth-child(11){
-			@media (max-width:540px){		//робимо по 2 фото в рядок
-					grid-column-start: 1;
-					grid-column-end: 5;
-					grid-row-start:11;
-					grid-row-end: 12;
-			}
-		}
-		&__item:nth-child(12){
-			@media (max-width:540px){		//робимо по 2 фото в рядок
-					grid-column-start: 1;
-					grid-column-end: 5;
-					grid-row-start:12;
-					grid-row-end: 13;
-			}
-		}
-}						//закрили блок
+	}
+}
+
+
+
 
 
 

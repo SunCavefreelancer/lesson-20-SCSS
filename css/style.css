@@ -4879,6 +4879,243 @@ textarea {
   -webkit-transform: translateY(9px);
       -ms-transform: translateY(9px);
           transform: translateY(9px);
+  border: 1px solid transparent;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.prize__link:hover::before {
+  border: 1px solid #fff;
+}
+
+.sertificate {
+  padding: 150px 0 50px 0;
+}
+@media (max-width: 767px) {
+  .sertificate {
+    padding: 80px 0 30px 0;
+  }
+}
+.sertificate__container h4 {
+  font-size: 35px;
+  color: #fff;
+  font-family: "CoreSansC-500";
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+@media (max-width: 470px) {
+  .sertificate__container h4 {
+    font-size: 30px;
+  }
+}
+.sertificate__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+@media (max-width: 992px) {
+  .sertificate__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .sertificate__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 470px) {
+  .sertificate__cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.sertificate__card > *:last-child {
+  margin-bottom: 0;
+}
+.sertificate__title {
+  font-size: 20px;
+  color: #fff;
+  font-family: "CoreSansC-500";
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.sertificate__img {
+  margin-bottom: 20px;
+}
+.sertificate__img img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 300/450;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: 5px 5px 20px #080808;
+          box-shadow: 5px 5px 20px #080808;
+  border: 1px solid #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.sertificate__img img:hover {
+  border: 1px solid orange;
+  -webkit-transform: translateY(5px);
+      -ms-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+.licensia {
+  padding: 150px 0 50px 0;
+}
+@media (max-width: 992px) {
+  .licensia {
+    padding: 80px 0 30px 0;
+  }
+}
+.licensia__container h4 {
+  font-size: 35px;
+  line-height: 130%;
+  color: #fff;
+  font-family: "CoreSansC-500";
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  .licensia__container h4 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 470px) {
+  .licensia__container h4 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 370px) {
+  .licensia__container h4 {
+    font-size: 20px;
+  }
+}
+.licensia__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+@media (max-width: 1270px) {
+  .licensia__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 992px) {
+  .licensia__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 470px) {
+  .licensia__cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.licensia__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+}
+.licensia__card > *:last-child {
+  margin-bottom: 0;
+}
+.licensia__title {
+  font-size: 20px;
+  color: #fff;
+  font-family: "CoreSansC-500";
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.licensia__sub-title {
+  font-size: 16px;
+  color: #fff;
+  font-family: "Inter";
+  margin-bottom: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.licensia__img {
+  margin-bottom: 20px;
+}
+.licensia__img img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 300/450;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: 5px 5px 20px #080808;
+          box-shadow: 5px 5px 20px #080808;
+  border: 1px solid #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.licensia__img img:hover {
+  border: 1px solid orange;
+  -webkit-transform: translateY(5px);
+      -ms-transform: translateY(5px);
+          transform: translateY(5px);
+}
+.licensia__button {
+  padding: 15px 34px;
+  color: #fff;
+  background-color: #8f2835;
+  border-color: #8f2835;
+  font-family: "CoreSansC-500";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  border: 1px solid transparent;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.licensia__button:hover {
+  background-color: transparent;
+  border: 1px solid #8f2835;
+}
+.licensia__list h4 {
+  font-size: 20px;
+}
+.licensia__link {
+  font-size: 16px;
+  color: #fff;
+  line-height: 115%;
+  line-height: 125%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.licensia__link:not(:last-child) {
+  margin-bottom: 10px;
+}
+.licensia__link::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20px;
+          flex: 0 0 20px;
+  background-image: url(../сертификаты/кнопка.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-transform: translateY(3px);
+      -ms-transform: translateY(3px);
+          transform: translateY(3px);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+  border: 1px solid transparent;
+}
+.licensia__link:hover::before {
+  border: 1px solid #fff;
+  border-radius: 50%;
 }
 
 body {
@@ -5447,9 +5684,7 @@ body {
 
 .travell {
   padding: 60px 0 50px 0;
-  /* 	&__img {
-
-  	} */
+  /* 	&__img {	} */
 }
 @media (max-width: 1200px) {
   .travell {
@@ -5506,34 +5741,6 @@ body {
   min-height: 100%;
   display: grid;
 }
-.travell__item:nth-child(1) {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 3;
-}
-@media (max-width: 1200px) {
-  .travell__item:nth-child(1) {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-  }
-}
-.travell__item:nth-child(12) {
-  grid-column-start: 3;
-  grid-column-end: 5;
-  grid-row-start: 3;
-  grid-row-end: 5;
-}
-@media (max-width: 1200px) {
-  .travell__item:nth-child(12) {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 4;
-  }
-}
 .travell__img img {
   width: 100%;
   height: 100%;
@@ -5542,6 +5749,11 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+.travell__img img:hover {
+  opacity: 0.5;
 }
 .travell__text {
   position: relative;
@@ -5549,6 +5761,7 @@ body {
   padding: 25px;
   color: #fff;
   text-align: center;
+  text-shadow: 1px 0 2px #000;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;

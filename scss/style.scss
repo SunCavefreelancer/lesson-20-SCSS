@@ -30,6 +30,14 @@
 @import "_Linear.scss";
 // Функції
 @import "_function.scss";
+// Компоненти, сторінки
+@import "_Sertificate.scss";
+// Компоненти, сторінки
+@import "_licenziya.scss";
+
+
+
+
 
 
 
@@ -668,36 +676,10 @@ body {
 		min-height: 100%;
 		
 		display: grid;		//для тексту
-	
-	&:nth-child(1) {
-		grid-column-start: 1;
-		grid-column-end: 3;
-		grid-row-start: 1;
-		grid-row-end: 3;
-		@media (max-width:1200px){
-			grid-column-start: 1;
-			grid-column-end: 2;
-			grid-row-start: 1;
-			grid-row-end: 2;
-		}
-		}
-		&:nth-child(12) {
-			grid-column-start: 3;
-			grid-column-end: 5;
-			grid-row-start: 3;
-			grid-row-end: 5;
-			@media (max-width:1200px){
-				grid-column-start: 3;
-				grid-column-end: 4;
-				grid-row-start: 3;
-				grid-row-end: 4;
-			}
-			}
 	}
-	// .travell__img
-/* 	&__img {
 
-	} */
+	// .travell__img
+/* 	&__img {	} */
 
 	&__img img{
 		width: 100%;
@@ -706,6 +688,10 @@ body {
 		position: absolute;
 		top: 0;
 		left: 0;
+		transition: all 0.8s ease;
+		&:hover {
+			opacity: 0.5;
+		}
 	}
 
 	// .travell__text
@@ -716,6 +702,7 @@ body {
 		padding: 25px;
 		color: #fff;
 		text-align: center;
+		text-shadow: 1px 0 2px #000;
 
 		align-items: end;		//для тексту
 		align-self: end;		//для тексту
